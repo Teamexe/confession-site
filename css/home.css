@@ -21,7 +21,6 @@ body
 #mycreation{
     margin=5px;
 }
-
 .homeImg{
     padding:20px;
     padding-left:35px;
@@ -41,4 +40,19 @@ body
     top:350px;
     right:50px;
     left:1220px;
+}
+#i1{
+    position:absolute;
+    top:620px;
+    left:590px;
+}
+#i2{
+    position:absolute;
+    top:620px;
+    left:606px;
+}
+#i3{
+    position:absolute;
+    top:620px;
+    left:622px;
 }
