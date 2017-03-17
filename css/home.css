@@ -1,63 +1,60 @@
 *{
-	margin:0;
-	padding:0;
+	margin:0px;
+	padding:0px;
 }
 body
 {
-	padding-top:20px;
+	padding-top:10px;
 }
-#admin{
-	position:inline;
-	margin-left:500px;
-	background:grey;
-	padding:2px;
+nav{
+	height: 45px;
+	width:100%;
 }
-#about{
-	position:inline;
-	margin-left:20px;
-	background:grey;
-	padding:2px;
+nav ul{
+	list-style-type: none;		
+	margin-left:0px;
+}
+#admin{	
+	position:absolute;
+	left:960px;
+    background-color:#79797c;
+	border:3px solid #79797c;
+	border-radius:5px;
+}
+#about{	
+	position:absolute;
+	left:1100px;
+	background-color:#79797c;
+	border:3px solid #79797c;
+	border-radius:5px;
+}
+li a{
+	padding:8px;
+	text-decoration:none;
+	color:white;
+}
+li a:hover{
+	padding:8px;
+	text-decoration:none;
+	color:white;
+}
+li a:visited{
+	padding:8px;
+	text-decoration:none;
+	color:white;
 }
 #mycreation{
     margin:0px;
 }
 .homeImg{
-    padding:20px;
+    padding-top:0px;
     padding-left:39px;
 	padding-bottom:0px;
 	padding-right:0px;
     height:600px;
     width:1254px;
 }
-.fa{
- color:bisque;   
-}
-.fa-angle-left{
-    position:absolute;
-    left:50px;
-    top:350px;
-}
-.fa-angle-right{
-    position: absolute;
-    top:350px;
-    right:50px;
-    left:1220px;
-}
-#i1{
-    position:absolute;
-    top:620px;
-    left:590px;
-}
-#i2{
-    position:absolute;
-    top:620px;
-    left:606px;
-}
-#i3{
-    position:absolute;
-    top:620px;
-    left:622px;
-}
+
 #see{
 	position:absolute;
 	top:550px;
