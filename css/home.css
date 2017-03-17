@@ -19,13 +19,15 @@ body
 	padding:2px;
 }
 #mycreation{
-    margin=5px;
+    margin:0px;
 }
 .homeImg{
     padding:20px;
-    padding-left:35px;
+    padding-left:39px;
+	padding-bottom:0px;
+	padding-right:0px;
     height:600px;
-    width:1230px;
+    width:1254px;
 }
 .fa{
  color:bisque;   
@@ -55,4 +57,14 @@ body
     position:absolute;
     top:620px;
     left:622px;
+}
+#see{
+	position:absolute;
+	top:550px;
+	left:400px;
+}
+#make{
+	position:absolute;
+	top:550px;
+	left:625px;
 }
