@@ -1,8 +1,47 @@
+*{
+	box-sizing:border-box;
+    margin:0px;
+	padding:0px;
+}
+
 #main{
     position:absolute;
-    top:150px;
-    left:450px;
+    top:15%;
+    left:5%;
     padding:15px 15px;
     background-color: rgba(88, 62, 126, 0.2);
+    border: 1px solid rgba(86, 61, 124, .2);
+}
+#reqd{
     margin-bottom: 20px;
+}
+.input{
+    margin-bottom:20px;
+}
+.extra{  
+    margin-left:5px;
+}
+#submission{
+    margin-left:90px;
+}
+@media only screen and (min-width:400px){
+    #main{
+        left:10%;
+    }
+}
+@media only screen and (min-width:500px){
+    #main{
+        left:20%;
+    }
+}
+@media only screen and (min-width:600px){
+    #main{
+        left:30%;
+    }
+}
+@media only screen and (min-width:768px){
+    #main{
+        left:35%;
+    }
+} 
 }
