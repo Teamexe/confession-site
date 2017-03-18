@@ -1,5 +1,6 @@
 *{
-	margin:0px;
+	box-sizing:border-box;
+    margin:0px;
 	padding:0px;
 }
 body
@@ -7,44 +8,44 @@ body
 	padding-top:10px;
 }
 nav{
+    margin-top:10px;
+    margin-bottom:10px;
 	height: 45px;
 	width:100%;
 }
-nav ul{
-	list-style-type: none;		
-	margin-left:0px;
-}
 #admin{	
-	position:absolute;
-	left:960px;
+    float:right;
+    padding:5px;
     background-color:#79797c;
 	border:3px solid #79797c;
 	border-radius:5px;
 }
 #about{	
-	position:absolute;
-	left:1100px;
+    float:right;
+	margin-left:25px;
+    margin-right:5%;
+    padding:5px;
 	background-color:#79797c;
 	border:3px solid #79797c;
 	border-radius:5px;
 }
-li a{
+span a{
 	padding:8px;
 	text-decoration:none;
 	color:white;
 }
-li a:hover{
+span a:hover{
 	padding:8px;
 	text-decoration:none;
 	color:white;
 }
-li a:visited{
-	padding:8px;
+span a:visited{
+    padding:8px;
 	text-decoration:none;
 	color:white;
 }
 #mycreation{
-    margin:0px;
+    width:100%;
 }
 .homeImg{
     padding-top:0px;
@@ -57,11 +58,11 @@ li a:visited{
 
 #see{
 	position:absolute;
-	top:550px;
-	left:400px;
+	top:81%;
+	left:30%;
 }
 #make{
 	position:absolute;
-	top:550px;
-	left:625px;
+	top:81%;
+	left:48%;
 }
