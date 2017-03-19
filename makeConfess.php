@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <link rel="stylesheet" href="css/makeConfess.css?version=1">
+        <link rel="stylesheet" href="css/makeConfess.css?version=2">
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
          <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -17,34 +17,41 @@
             </div>
             <form action="#" method="post" enctype="multipart/form-data">
                     <div class="input">
-                        <input type="text" name="name" placeholder="Enter name">
+                        <input type="text"  class="inpf" name="name"  placeholder="Enter name">
                         <span class="extra">
                             <i class="fa fa-asterisk" aria-hidden="true"></i>  
                         </span> 
                     </div>
                     <div class="input">
-                        <input type="text" name="Year" placeholder="Enter Year">
+                        <input type="text" name="Year" class="inpf" placeholder="Enter Year">
                         <span class="extra">
                             <i class="fa fa-asterisk" aria-hidden="true"></i>  
                         </span> 
                     </div>
                     <div class="input">
-                        <input type="text" name="branch" placeholder="Enter branch">
+                        <input type="text" name="branch" class="inpf" placeholder="Enter branch">
                         <span class="extra">
                             <i class="fa fa-asterisk" aria-hidden="true"></i>  
                         </span> 
                     </div>
                     <div class="input">
-                        <input type="text" name="email" placeholder="Enter email id">
+                        <input type="text" name="email" class="inpf" placeholder="Enter email id">
                         <span class="extra">
                             <i class="fa fa-asterisk" aria-hidden="true"></i>  
                         </span> 
                     </div>
                     <div class="input">
-                        <label for="fileToUpload"> 
-                            Please select a .txt file
+                        <input name="confirm" value="confirm" type="checkbox">
+                        <label for="confirm">
+                            Send as anonymous
+                        </label> 
+                    </div>
+                    <div class="input">
+                        <label for="message">
+                            Write your confession here
                         </label><br>
-                        <input type="file" name="fileToUpload"> 
+                        <textarea class="inpf" name="confmsg" rows="5">
+                        </textarea>
                     </div>
                     <input type="submit" class="btn btn-info" id="submission" value="Submit" name="submit">
             </form>
