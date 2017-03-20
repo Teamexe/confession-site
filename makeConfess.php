@@ -11,7 +11,7 @@
         <div id="main"> 
             <div id="reqd">
                 <strong>
-                    All fields are optional
+                    All info fields are optional
                 </strong>
             </div>
             <form role="form" action="confessdb.php" method="post" >

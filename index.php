@@ -1,3 +1,7 @@
+<?php
+    $db=mysqli_connect("localhost", "root", "Sourav123@", "confessionsite")
+                or die('Error connecting to database');
+?>
 <html>
 	<head>
 		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -23,9 +27,57 @@
 		
 		<div id="mycreation">
             <img class="homeImg" src=images/confession.jpg>
-            <a class="btn btn-lg btn-primary" id="see" href="#" role="button">See confessions</a>
+            <a class="btn btn-lg btn-primary" id="see" href="#confessions" role="button">See confessions</a>
             <a class="btn btn-lg btn-primary" id="make" href="makeConfess.php" role="button">Make confession</a>
 		</div>
-		
+        <div id="confessions">
+            <?php 
+                $query="select * from adminperm
+                       where permission=1";
+                $result=mysqli_query($db, $query);
+                if(!$result)die ("Database access failed:". mysql_error());
+                while($row=mysqli_fetch_array($result))
+            {?>
+                <div class="name">
+                    <span> Name:</span> 
+                    <span>
+                        <?php
+                            echo $row['name'];
+                        ?>
+                    </span>
+                </div>
+                <div class="year">
+                    <span> Year:</span> 
+                    <span>
+                        <?php
+                            echo $row['year'];
+                        ?>
+                    </span>
+                </div>
+                <div class="branch">
+                <span> branch:</span> 
+                    <span>
+                        <?php
+                            echo $row['branch'];
+                        ?>
+                    </span>
+                </div>
+            <div class="email">
+                <span> email:</span> 
+                    <span>
+                        <?php
+                            echo $row['email'];
+                        ?>
+                    </span>
+                </div>
+                <div class="message">
+                    <span> Confession:</span> 
+                    <span>
+                        <?php echo $row['message']?>
+                    </span>
+                </div>
+            <?php }?>
+           <?php mysqli_close($db);?>
+        </div>
 	</body>
 </html>

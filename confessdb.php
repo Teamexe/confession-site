@@ -23,14 +23,16 @@
         $data = htmlspecialchars($data);
         return $data;
     }
-    $sql="INSERT INTO adminperm (name, year, branch, email, message) values ('$name','$year',' $branch ', '$email',' $message')";
-    if(mysqli_query($db,$sql)){
-        echo "Your message has been sent to the admin for a review process";
-    }
-    else{
-        if(!$message)
-            echo"You have to write a message first";
-        else
+    if($message){
+        $sql="INSERT INTO adminperm (name, year, branch, email, message) values ('$name','$year',' $branch ', '$email',' $message')";
+        if(mysqli_query($db,$sql)){
+            echo "Your message has been sent to the admin for a review process";
+        }
+        else{
             echo "Sorry we are not able to send the data";
+        }
     }
+    else
+        echo "You have to enter some message";
+    mysqli_close($db);
 ?> 
