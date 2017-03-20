@@ -11,40 +11,21 @@
         <div id="main"> 
             <div id="reqd">
                 <strong>
-                    <i class="fa fa-asterisk" aria-hidden="true"></i>
-                    Required field
+                    All fields are optional
                 </strong>
             </div>
-            <form action="#" method="post" enctype="multipart/form-data">
+            <form role="form" action="confessdb.php" method="post" >
                     <div class="input">
                         <input type="text"  class="inpf" name="name"  placeholder="Enter name">
-                        <span class="extra">
-                            <i class="fa fa-asterisk" aria-hidden="true"></i>  
-                        </span> 
                     </div>
                     <div class="input">
-                        <input type="text" name="Year" class="inpf" placeholder="Enter Year">
-                        <span class="extra">
-                            <i class="fa fa-asterisk" aria-hidden="true"></i>  
-                        </span> 
+                        <input type="text" name="year" class="inpf" placeholder="Enter Year"> 
                     </div>
                     <div class="input">
                         <input type="text" name="branch" class="inpf" placeholder="Enter branch">
-                        <span class="extra">
-                            <i class="fa fa-asterisk" aria-hidden="true"></i>  
-                        </span> 
                     </div>
                     <div class="input">
-                        <input type="text" name="email" class="inpf" placeholder="Enter email id">
-                        <span class="extra">
-                            <i class="fa fa-asterisk" aria-hidden="true"></i>  
-                        </span> 
-                    </div>
-                    <div class="input">
-                        <input name="confirm" value="confirm" type="checkbox">
-                        <label for="confirm">
-                            Send as anonymous
-                        </label> 
+                        <input type="text" name="email" class="inpf" placeholder="Enter email id"> 
                     </div>
                     <div class="input">
                         <label for="message">
