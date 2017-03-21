@@ -70,6 +70,29 @@ span a:visited{
     position:relative;
     display:block;
     margin-top: 70px;
-    margin-left:20px;
-    margin-right:20px;
+    margin-left:35px;
+    margin-right:35px;
+}
+.conf{
+    position:relative;
+    display:block;
+    margin-bottom:20px;
+    width:95%;
+    min-height:100px;
+    border:3px solid rgba(88, 62, 126, 0.2);
+    border-radius:10px;
+    background-color: rgba(88, 62, 126, 0.2);
+}
+.messageno{
+    position:relative;
+    display:block;
+    margin-left:8px;
+    margin-top:5px;
+}
+.message{
+    position:relative;
+    display:block;
+    margin-left:8px;
+    margin-top:5px;
+    
 }

@@ -16,6 +16,14 @@
 	<meta charset="utf-8"/>
 	</head>
 	<body>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
 		<nav>
             <span id="about">
 				<a href="aboutusconfession/about.html">ABOUT US</a>
@@ -36,14 +44,17 @@
                 while($row=mysqli_fetch_array($result))
             {?>
                 <div class="conf">
-                    <span>
+                    <div class="messageno">
                         Message no #<?php echo $row['id'];?>
-                    </span>
+                    </div>
                     <div class="message">
-                        <span> Confession:</span> 
-                        <span>
+                        <i class="fa fa-quote-left fa-2x" aria-hidden="true"></i>
+                        <span class="">
                             <?php echo $row['message']?>
                         </span>
+                        <?php $id=$row['id'];?>
+                    </div>
+                    <div class="fb-comments" id="<?php echo $id;?>"data-href="https://localhost/confession/#<?php echo $id;?>" data-width="1000" data-numposts="5">
                     </div>
                 </div>                  
             <?php }?>
