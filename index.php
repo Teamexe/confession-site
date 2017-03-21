@@ -58,7 +58,7 @@
                     </div>
                     <div class="message">
                         <i class="fa fa-quote-left fa-2x" aria-hidden="true"></i>
-                        <span class="">
+                        <span class="orimess">
                             <?php echo $row['message']?>
                         </span>
                         <?php $id=$row['id'];?>
