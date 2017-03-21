@@ -13,13 +13,13 @@ nav{
 	height: 45px;
 	width:100%;
 }
-#admin{	
+/*#admin{	
     float:right;
     padding:5px;
     background-color:#79797c;
 	border:3px solid #79797c;
 	border-radius:5px;
-}
+}*/
 #about{	
     float:right;
 	margin-left:25px;
@@ -65,4 +65,11 @@ span a:visited{
 	position:absolute;
 	top:81%;
 	left:48%;
+}
+#confessions{
+    position:relative;
+    display:block;
+    margin-top: 70px;
+    margin-left:20px;
+    margin-right:20px;
 }

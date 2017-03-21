@@ -5,7 +5,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/home.css?version=1">
+		<link rel="stylesheet" href="css/home.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">    
 		<script> src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
@@ -19,9 +19,6 @@
 		<nav>
             <span id="about">
 				<a href="aboutusconfession/about.html">ABOUT US</a>
-            </span>
-            <span id="admin">
-                <a  href="login.html" >ADMIN LOGIN</a>
             </span>
 		</nav>
 		
@@ -38,44 +35,17 @@
                 if(!$result)die ("Database access failed:". mysql_error());
                 while($row=mysqli_fetch_array($result))
             {?>
-                <div class="name">
-                    <span> Name:</span> 
+                <div class="conf">
                     <span>
-                        <?php
-                            echo $row['name'];
-                        ?>
+                        Message no #<?php echo $row['id'];?>
                     </span>
-                </div>
-                <div class="year">
-                    <span> Year:</span> 
-                    <span>
-                        <?php
-                            echo $row['year'];
-                        ?>
-                    </span>
-                </div>
-                <div class="branch">
-                <span> branch:</span> 
-                    <span>
-                        <?php
-                            echo $row['branch'];
-                        ?>
-                    </span>
-                </div>
-            <div class="email">
-                <span> email:</span> 
-                    <span>
-                        <?php
-                            echo $row['email'];
-                        ?>
-                    </span>
-                </div>
-                <div class="message">
-                    <span> Confession:</span> 
-                    <span>
-                        <?php echo $row['message']?>
-                    </span>
-                </div>
+                    <div class="message">
+                        <span> Confession:</span> 
+                        <span>
+                            <?php echo $row['message']?>
+                        </span>
+                    </div>
+                </div>                  
             <?php }?>
            <?php mysqli_close($db);?>
         </div>
