@@ -93,6 +93,25 @@ span a:visited{
     position:relative;
     display:block;
     margin-left:8px;
+    margin-right:8px;
     margin-top:5px;
-    
+    margin-bottom:15px;
+    min-height:100px;	
+	border:3px solid #79797c;
+    border-radius:10px;
+    background-color: #79797c;
+    color:beige;
+    opacity:0.85;
+}
+
+.fa-quote-left{
+    margin-left:10px;
+    margin-right:8px;
+    margin-top:8px;
+}
+.orimess{
+    margin-top:8px;
+}
+.fb-like{
+    margin-left:8px;
 }

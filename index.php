@@ -7,7 +7,8 @@
 		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/home.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
 		<script> src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
 		</script>
 		<title>
@@ -16,6 +17,14 @@
 	<meta charset="utf-8"/>
 	</head>
 	<body>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "http://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId=127593347773095";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
         <div id="fb-root"></div>
         <script>(function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
@@ -54,7 +63,8 @@
                         </span>
                         <?php $id=$row['id'];?>
                     </div>
-                    <div class="fb-comments" id="<?php echo $id;?>"data-href="https://localhost/confession/#<?php echo $id;?>" data-width="1000" data-numposts="5">
+                    <div class="fb-like" data-href="https://localhost/confession/#confession/#<?php echo $id?>" data-width="5" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                    <div class="fb-comments" id="<?php echo $id;?>"data-href="https://localhost/confession/#<?php echo $id?>" data-width="100%" data-numposts="3">
                     </div>
                 </div>                  
             <?php }?>
