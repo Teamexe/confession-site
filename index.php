@@ -18,7 +18,7 @@
 	<body>
 		<nav>
             <span id="about">
-				<a href="#">ABOUT US</a>
+				<a href="aboutusconfession/about.html">ABOUT US</a>
             </span>
             <span id="admin">
                 <a  href="login.html" >ADMIN LOGIN</a>
