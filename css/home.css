@@ -13,13 +13,13 @@ nav{
 	height: 45px;
 	width:100%;
 }
-/*#admin{	
+#reportus{	
     float:right;
     padding:5px;
     background-color:#79797c;
 	border:3px solid #79797c;
 	border-radius:5px;
-}*/
+}
 #about{	
     float:right;
 	margin-left:25px;
@@ -29,19 +29,34 @@ nav{
 	border:3px solid #79797c;
 	border-radius:5px;
 }
-span a{
+#about a{
 	padding:8px;
 	text-decoration:none;
 	color:white;
 }
-span a:hover{
+#about a:hover{
 	padding:8px;
 	text-decoration:none;
 	color:white;
 }
-span a:visited{
+#about a:visited{
     padding:8px;
+    text-decoration:none;
+	color:white;
+}
+#reportus a{
+	padding:8px;
 	text-decoration:none;
+	color:white;
+}
+#reportus a:hover{
+	padding:8px;
+	text-decoration:none;
+	color:white;
+}
+#reportus a:visited{
+    padding:8px;
+    text-decoration:none;
 	color:white;
 }
 #mycreation{
@@ -100,8 +115,11 @@ span a:visited{
 	border:3px solid #79797c;
     border-radius:10px;
     background-color: #79797c;
-    color:beige;
     opacity:0.85;
+}
+.title{
+    margin-top:8px;
+    margin-left:10px;
 }
 
 .fa-quote-left{
@@ -110,8 +128,30 @@ span a:visited{
     margin-top:8px;
 }
 .orimess{
+    color:beige;
     margin-top:8px;
 }
 .fb-like{
     margin-left:8px;
 }
+.report{
+    position:relative;
+    display:inline;
+    margin-left:90%;
+    text-decoration:none;
+}
+.formreport{
+    position: relative;
+    display:inline;
+}
+/*.report a{
+    color:#2f59c4;
+}
+.report a:hover{
+    color:#6f96fc;
+    text-decoration:none;
+}
+.report a:visited{
+    color:#00245e
+    text-decoration:none;
+}*/

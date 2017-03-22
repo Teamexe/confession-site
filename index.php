@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-		<script> src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+		<script src="jquery/jquery-3.2.0.min.js">
 		</script>
 		<title>
 			Confession Website
@@ -37,6 +37,9 @@
             <span id="about">
 				<a href="aboutusconfession/about.html">ABOUT US</a>
             </span>
+            <span id="reportus">
+                <a href="reportinfo.php">REPORT US</a>
+            </span>
 		</nav>
 		
 		<div id="mycreation">
@@ -47,21 +50,24 @@
         <div id="confessions">
             <?php 
                 $query="select * from adminperm
-                       where permission=1";
+                       where permission=1 order by id desc";
                 $result=mysqli_query($db, $query);
                 if(!$result)die ("Database access failed:". mysql_error());
                 while($row=mysqli_fetch_array($result))
             {?>
+                
                 <div class="conf">
-                    <div class="messageno">
-                        Message no #<?php echo $row['id'];?>
+                    <div class="title">
+                        <strong>
+                             Confession #<?php echo $row['id'];?>
+                        </strong>
+                         <?php $id=$row['id'];?>
                     </div>
                     <div class="message">
                         <i class="fa fa-quote-left fa-2x" aria-hidden="true"></i>
                         <span class="orimess">
                             <?php echo $row['message']?>
                         </span>
-                        <?php $id=$row['id'];?>
                     </div>
                     <div class="fb-like" data-href="https://localhost/confession/#confession/#<?php echo $id?>" data-width="5" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                     <div class="fb-comments" id="<?php echo $id;?>"data-href="https://localhost/confession/#<?php echo $id?>" data-width="100%" data-numposts="3">
