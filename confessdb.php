@@ -31,15 +31,23 @@
         else{
             echo "Sorry we are not able to send the data";
         }
-        $emailid="sahoosourav1996@gmail.com";
+        $emailid1="sahoosourav1996@gmail.com";
+        $emailid2="ankitguleria1@gmail.com";
         $subject="Confession";
         $string=$name." of ".$branch." of year ".$year." sent confession ".$message." email id:".$email;
-        if(mail($emailid,$subject,$string,"")){
+        if(mail($emailid1,$subject,$string,"")){
             $message="admin has also been notified";
             echo "<script> alert('$message');</script>";
         }
+        
         else{
-            $message="admin can't be notified";
+            $message="admin1 can't be notified";
+            echo "<script> alert('$message');</script>";
+        }
+        if(mail($emailid2,$subject,$string,"")){
+        }
+        else{
+            $message="admin2 can't be notified";
             echo "<script> alert('$message');</script>";
         }
     }

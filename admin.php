@@ -50,12 +50,7 @@
                         <?php echo $row['message']?>
                     </span>
                 </div>
-                <span> id:</span>
-                <span>
-                    <?php echo $row['id'];?>
-                </span>
                 <div class="buttons">
-                    <?php echo $row['id']?>
                     <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
                         <button type="submit" value="<?php echo $row['id']?>" name="accept">Accept</button>
                         <?php if($row['email']!=""){

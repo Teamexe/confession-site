@@ -37,13 +37,14 @@
                 echo "<script> alert('$message');</script>"; 
             }
             else{
-                $email="sahoosourav1996@gmail.com";
+                $email1="sahoosourav1996@gmail.com";
+                $email2="ankitguleria1@gmail.com";
                $string=wordwrap($string,70);
                 if($id!=""){
                     $subject="Confession report";
                 }
                 else{
-                    $suject="Normal report";
+                    $subject="Normal report";
                 }
                 if(mail($email,$subject,$string,"")){
                     $message="Your report has been sent to the admin for a review process";
@@ -56,7 +57,19 @@
                     $report="";
                 } 
                 else{
-                    $message="your report can't be sent to the admin";
+                    $message="your report can't be sent to the admin1";
+                    echo "<script> alert('$message');</script>"; 
+                }
+                if(mail($email2,$subject,$string,"")){
+                    $id="";
+                    $name="";
+                    $year="";
+                    $branch="";
+                    $email="";
+                    $report="";
+                }
+                else{
+                    $message="your report can't be sent to the admin2";
                     echo "<script> alert('$message');</script>"; 
                 }
             }
