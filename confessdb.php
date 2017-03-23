@@ -31,6 +31,17 @@
         else{
             echo "Sorry we are not able to send the data";
         }
+        $emailid="sahoosourav1996@gmail.com";
+        $subject="Confession";
+        $string=$name." of ".$branch." of year ".$year." sent confession ".$message." email id:".$email;
+        if(mail($emailid,$subject,$string,"")){
+            $message="admin has also been notified";
+            echo "<script> alert('$message');</script>";
+        }
+        else{
+            $message="admin can't be notified";
+            echo "<script> alert('$message');</script>";
+        }
     }
     else
         echo "You have to enter some message";

@@ -9,10 +9,6 @@
 <html>
     <body>
         <div id="container">
-            <h1>
-            Information for admin:
-                Here the first button means accept and the second button means reject
-            </h1>
             <?php
             while($row=mysqli_fetch_array($result))
             {?>
@@ -54,34 +50,84 @@
                         <?php echo $row['message']?>
                     </span>
                 </div>
+                <span> id:</span>
+                <span>
+                    <?php echo $row['id'];?>
+                </span>
                 <div class="buttons">
+                    <?php echo $row['id']?>
                     <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-                        <input type="submit" name="accept" value="<?php echo $row['id']?>">
-                        <input type="submit" name="reject" value="<?php $row['id']?>">
+                        <button type="submit" value="<?php echo $row['id']?>" name="accept">Accept</button>
+                        <?php if($row['email']!=""){
+                            echo "Enter the reason to reject the confession ";
+                            $name="reason";
+                            $rows="5";
+                            echo "<textarea name='$name' rows='$rows'></textarea>";
+                        }?>
+                        <button type="submit" value="<?php echo $row['id']?>" name="reject">Reject</button>
                     </form>
                 </div>
                 <br>
            <?php }?>
         </div>
         <?php
-        function test_input($data) 
+            function test_input($data) 
+                {
+                    $data = trim($data);
+                    $data = stripslashes($data);
+                    $data = htmlspecialchars($data);
+                    return $data;
+                }
+            if(isset($_POST['accept']))
             {
-                $data = trim($data);
-                $data = stripslashes($data);
-                $data = htmlspecialchars($data);
-                return $data;
+                $id=$_POST["accept"];
+                $subject="Acceptance of confession";
+                $sql="update adminperm
+                     set permission=1
+                     where id='$id';";
+                $msg="Your message has been verified and published on the site";
+                $result=mysqli_query($db, $sql);
+                if(!$result)die ("Database access failed:". mysql_error());
+                $sql="select email from adminperm where id='$id'";
+                $result=mysqli_query($db, $sql);
+                if(!$result)die ("Database access failed:". mysqli_error());
+                while($row = mysqli_fetch_assoc($result)){
+                    if(mail($row['email'],$subject,$msg,"")){
+                        $message="person has been sent msg";
+                        echo "<script> alert('$message');</script>";
+                    }
+                    else{
+                        $message="person can't be notified";
+                        echo "<script> alert('$message');</script>";
+                    }
+                }
+
             }
-        if(isset($_POST['accept']))
-        {
-            $id=$_POST["accept"];
-            $sql="update adminperm
-                 set permission=1
-                 where id='$id';";
-            $result=mysqli_query($db, $sql);
-            if(!$result)die ("Database access failed:". mysql_error());
-            
-        }
-            mysqli_close($db);
+               
+            if(isset($_POST['reject']))
+            {
+                $id=$_POST['reject'];
+                $msg=$_POST["reason"];
+                $subject="from confession site team.exe";
+                $sql="select email from adminperm where id='$id'";
+                $result=mysqli_query($db, $sql);
+                if(!$result)die ("Database access failed:". mysqli_error());
+                while($row = mysqli_fetch_assoc($result)){
+                    if(mail($row['email'],$subject,$msg,"")){
+                        $message="person has been sent msg";
+                        echo "<script> alert('$message');</script>";
+                    }
+                    else{
+                        $message="person can't be notified";
+                        echo "<script> alert('$message');</script>";
+                    }
+                }
+               $sql="delete from adminperm where id='$id'";
+                $result=mysqli_query($db,$sql);
+                if(!$result)die("Entry can't be deleted");
+            }
+             mysqli_close($db);
         ?>
+        
     </body>
 </html>
