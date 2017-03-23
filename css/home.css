@@ -88,6 +88,18 @@ nav{
     margin-left:35px;
     margin-right:35px;
 }
+div.fixed {
+margin: 0%;
+background-color:  white; 
+ padding: 0%;
+ position: fixed;
+ bottom: 0;
+ width: 100%;
+ border: 3px solid black;
+}
+    margin-left:35px;
+    margin-right:35px;
+}
 .conf{
     position:relative;
     display:block;

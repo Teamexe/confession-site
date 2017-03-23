@@ -1,6 +1,6 @@
 <?php
-    $db=mysqli_connect("localhost", "root", "Sourav123@", "confessionsite")
-                or die('Error connecting to database');
+  // $db=mysqli_connect("localhost", "root", "Sourav123@", "confessionsite")
+           //   or die('Error connecting to database');
 ?>
 <html>
 	<head>
@@ -17,6 +17,8 @@
 	<meta charset="utf-8"/>
 	</head>
 	<body>
+	
+	<img class="logo" src="aboutusconfession/logo.png" alt="exe logo" style="width:15%;height:15%;">
         <div id="fb-root"></div>
         <script>(function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
@@ -47,6 +49,33 @@
             <a class="btn btn-lg btn-primary" id="see" href="#confessions" role="button">See confessions</a>
             <a class="btn btn-lg btn-primary" id="make" href="makeConfess.php" role="button">Make confession</a>
 		</div>
+		 <div class="fixed" align="center">
+	 <i class="fa fa-copyright" aria-hidden="true"></i>
+            : 2017 | Designed, Developed & Hosted by Team .EXE
+            <a href="https://www.facebook.com/teamexe/">
+   <img id="fb" src="aboutusconfession/facebook.png" align="right" alt="facebook" onmouseover="bigImg(this)" onmouseout="normalImg(this)" title="Like us on facebook" style="width:2%;height:2%">
+    </a>
+    
+    <a href="https://www.youtube.com/channel/UCTIpvLaM1G-uUsthgCDauKw">
+   <img src="aboutusconfession/youtube.png" align="right" alt="you tube" title="Subscibe us on you tube" onmouseover="bigImg(this)" onmouseout="normalImg(this)" style="width:2%;height:2%">
+    </a>
+    
+    <a href="https://www.instagram.com/teamexenith/">
+   <img src="aboutusconfession/insta.png" align="right" alt="instagram" onmouseover="bigImg(this)" onmouseout="normalImg(this)" title="Follow us on Instagram" style="width:2%;height:2%">
+    </a>
+     
+	 </div>
+        
+        <script>
+function bigImg(x) {
+    x.style="width:3%;height:3%";
+}
+
+function normalImg(x) {
+    x.style="width:2%;height:2%"
+}
+</script>
+
         <div id="confessions">
             <?php 
                 $query="select * from adminperm
@@ -76,5 +105,6 @@
             <?php }?>
            <?php mysqli_close($db);?>
         </div>
+
 	</body>
 </html>
