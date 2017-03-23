@@ -31,7 +31,7 @@
             $branch=$_POST['branch'];
             $email=$_POST['email'];
             $report=$_POST['report'];
-            $string=$name." of ".$branch." of year ".$year." complained about confession ".$id." report: ".$report;
+            $string=$name." of ".$branch." of year ".$year." complained about confession ".$id." report: ".$report." email id:".$email;
             if($name=="" || $year=="" || $branch==""||$email==""){
                 $message="Please enter all the required fields";
                 echo "<script> alert('$message');</script>"; 
@@ -46,9 +46,14 @@
                     $suject="Normal report";
                 }
                 if(mail($email,$subject,$string,"")){
-                    echo "hello";
                     $message="Your report has been sent to the admin for a review process";
                     echo "<script> alert('$message');</script>"; 
+                    $id="";
+                    $name="";
+                    $year="";
+                    $branch="";
+                    $email="";
+                    $report="";
                 } 
                 else{
                     $message="your report can't be sent to the admin";
