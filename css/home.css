@@ -96,9 +96,7 @@ background-color:  white;
  bottom: 0;
  width: 100%;
  border: 3px solid black;
-}
-    margin-left:35px;
-    margin-right:35px;
+    z-index:10;
 }
 .conf{
     position:relative;

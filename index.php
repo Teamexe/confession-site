@@ -1,6 +1,6 @@
 <?php
-  // $db=mysqli_connect("localhost", "root", "Sourav123@", "confessionsite")
-           //   or die('Error connecting to database');
+  $db=mysqli_connect("localhost", "root", "Sourav123@", "confessionsite")
+              or die('Error connecting to database');
 ?>
 <html>
 	<head>
@@ -49,22 +49,21 @@
             <a class="btn btn-lg btn-primary" id="see" href="#confessions" role="button">See confessions</a>
             <a class="btn btn-lg btn-primary" id="make" href="makeConfess.php" role="button">Make confession</a>
 		</div>
-		 <div class="fixed" align="center">
-	 <i class="fa fa-copyright" aria-hidden="true"></i>
-            : 2017 | Designed, Developed & Hosted by Team .EXE
-            <a href="https://www.facebook.com/teamexe/">
-   <img id="fb" src="aboutusconfession/facebook.png" align="right" alt="facebook" onmouseover="bigImg(this)" onmouseout="normalImg(this)" title="Like us on facebook" style="width:2%;height:2%">
-    </a>
-    
-    <a href="https://www.youtube.com/channel/UCTIpvLaM1G-uUsthgCDauKw">
-   <img src="aboutusconfession/youtube.png" align="right" alt="you tube" title="Subscibe us on you tube" onmouseover="bigImg(this)" onmouseout="normalImg(this)" style="width:2%;height:2%">
-    </a>
-    
-    <a href="https://www.instagram.com/teamexenith/">
-   <img src="aboutusconfession/insta.png" align="right" alt="instagram" onmouseover="bigImg(this)" onmouseout="normalImg(this)" title="Follow us on Instagram" style="width:2%;height:2%">
-    </a>
-     
-	 </div>
+        <div class="fixed" align="center">
+             <i class="fa fa-copyright" aria-hidden="true"></i>
+                    : 2017 | Designed, Developed & Hosted by Team .EXE
+                    <a href="https://www.facebook.com/teamexe/">
+           <img id="fb" src="aboutusconfession/facebook.png" align="right" alt="facebook" onmouseover="bigImg(this)" onmouseout="normalImg(this)" title="Like us on facebook" style="width:2%;height:2%">
+            </a>
+
+            <a href="https://www.youtube.com/channel/UCTIpvLaM1G-uUsthgCDauKw">
+           <img src="aboutusconfession/youtube.png" align="right" alt="you tube" title="Subscibe us on you tube" onmouseover="bigImg(this)" onmouseout="normalImg(this)" style="width:2%;height:2%">
+            </a>
+
+            <a href="https://www.instagram.com/teamexenith/">
+           <img src="aboutusconfession/insta.png" align="right" alt="instagram" onmouseover="bigImg(this)" onmouseout="normalImg(this)" title="Follow us on Instagram" style="width:2%;height:2%">
+            </a>
+     </div>
         
         <script>
 function bigImg(x) {
@@ -90,7 +89,8 @@ function normalImg(x) {
                         <strong>
                              Confession #<?php echo $row['id'];?>
                         </strong>
-                         <?php $id=$row['id'];?>
+                        <span>
+                        <a href="#mycreation">go to top</a></span>
                     </div>
                     <div class="message">
                         <i class="fa fa-quote-left fa-2x" aria-hidden="true"></i>
