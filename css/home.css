@@ -1,0 +1,217 @@
+*{
+	box-sizing:border-box;
+    margin:0px;
+	padding:0px;
+}
+body
+{
+	padding-top:10px;
+}
+
+nav{
+    margin-top:10px;
+    margin-bottom:10px;
+	width:100%;
+}
+#teamexe{
+    position:relative;
+    margin-left:4%;
+}
+.logo{
+    height: 15%;
+    width:20%;
+}
+#reportus{	
+    float:right;
+    padding:5px;
+    background-color:#79797c;
+	border:3px solid #79797c;
+	border-radius:5px;
+}
+#about{	
+    float:right;
+	margin-left:25px;
+    margin-right:5%;
+    padding:5px;
+	background-color:#79797c;
+	border:3px solid #79797c;
+	border-radius:5px;
+}
+#about a{
+	padding:8px;
+	text-decoration:none;
+	color:white;
+}
+#about a:hover{
+	padding:8px;
+	text-decoration:none;
+	color:white;
+}
+#about a:visited{
+    padding:8px;
+    text-decoration:none;
+	color:white;
+}
+#reportus a{
+	padding:8px;
+	text-decoration:none;
+	color:white;
+}
+#reportus a:hover{
+	padding:8px;
+	text-decoration:none;
+	color:white;
+}
+#reportus a:visited{
+    padding:8px;
+    text-decoration:none;
+	color:white;
+}
+#mycreation{
+    width:100%;
+}
+.homeImg{
+    padding-top:0px;
+    padding-left:39px;
+	padding-bottom:0px;
+	padding-right:0px;
+    height:85%;
+    width:95%;
+}
+
+#see{
+	position:absolute;
+	top:81%;
+	left:30%;
+}
+#make{
+	position:absolute;
+	top:81%;
+	left:48%;
+}
+#confessions{
+    position:relative;
+    display:block;
+    margin-top: 70px;
+    margin-left:35px;
+    margin-right:35px;
+}
+div.fixed {
+margin: 0%;
+background-color:  white; 
+ padding: 0%;
+ position: fixed;
+ bottom: 0;
+ width: 100%;
+ border: 3px solid black;
+    z-index:10;
+}
+.conf{
+    position:relative;
+    display:block;
+    margin-bottom:20px;
+    width:95%;
+    min-height:100px;
+    border:3px solid rgba(88, 62, 126, 0.2);
+    border-radius:10px;
+    background-color: rgba(88, 62, 126, 0.2);
+}
+.messageno{
+    position:relative;
+    display:block;
+    margin-left:8px;
+    margin-top:5px;
+}
+.message{
+    position:relative;
+    display:block;
+    margin-left:8px;
+    margin-right:8px;
+    margin-top:5px;
+    margin-bottom:15px;
+    min-height:100px;	
+	border:3px solid #79797c;
+    border-radius:10px;
+    background-color: #79797c;
+    opacity:0.85;
+}
+.title{
+    margin-top:8px;
+    margin-left:10px;
+}
+#gotop{
+    float:right;
+    margin-right:10px;
+}
+
+.fa-quote-left{
+    margin-left:10px;
+    margin-right:8px;
+    margin-top:8px;
+}
+.orimess{
+    color:beige;
+    margin-top:8px;
+}
+.fb-like{
+    margin-left:8px;
+}
+.report{
+    position:relative;
+    display:inline;
+    margin-left:90%;
+    text-decoration:none;
+}
+.formreport{
+    position: relative;
+    display:inline;
+}
+@media only screen and (max-width:400px){
+    #about{
+        visibility: hidden;
+    }
+    #reportus{
+        visibility:hidden;
+    }
+    .homeImg{
+        padding-left:0px;
+        height:60%;
+        width:100%;
+    }
+    #see{
+        visibility: hidden;
+    }
+    #make{
+        visibility:hidden;
+    }
+    #confessions{
+        margin-left:0px;
+        margin-right:0px;
+    }
+    .message{
+        margin-right:0px;
+    }
+    div.fixed{
+        font-size:65%;
+    }
+}
+@media only screen and (min-width:500px){
+    #main{
+        left:20%;
+    }
+}
+@media only screen and (min-width:600px){
+    #main{
+        left:30%;
+    }
+}
+@media only screen and (min-width:768px){
+    #main{
+        left:35%;
+    }
+} 
+@media only screen and (orientation:landscape and max-height:400px){
+    #main{
+        top:2%;
+    }
+}

@@ -1,0 +1,54 @@
+*{
+	box-sizing:border-box;
+    margin:0px;
+	padding:0px;
+}
+
+#main{
+    position:absolute;
+    top:5%;
+    left:5%;
+    padding:15px 15px;
+    background-color: rgba(88, 62, 126, 0.2);
+    border: 1px solid rgba(86, 61, 124, .2);
+}
+#reqd{
+    margin-bottom: 20px;
+}
+.input{
+    margin-bottom:20px;
+}
+.input .inpf{
+    padding: 6px 12px;
+}
+/*.extra{  
+    margin-left:5px;
+}*/
+#submission{
+    margin-left:70px;
+}
+@media only screen and (min-width:400px){
+    #main{
+        left:10%;
+    }
+}
+@media only screen and (min-width:500px){
+    #main{
+        left:20%;
+    }
+}
+@media only screen and (min-width:600px){
+    #main{
+        left:30%;
+    }
+}
+@media only screen and (min-width:768px){
+    #main{
+        left:35%;
+    }
+} 
+@media only screen and (orientation:landscape and max-height:400px){
+    #main{
+        top:2%;
+    }
+}
