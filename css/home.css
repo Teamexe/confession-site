@@ -7,11 +7,19 @@ body
 {
 	padding-top:10px;
 }
+
 nav{
     margin-top:10px;
     margin-bottom:10px;
-	height: 45px;
 	width:100%;
+}
+#teamexe{
+    position:relative;
+    margin-left:4%;
+}
+.logo{
+    height: 15%;
+    width:20%;
 }
 #reportus{	
     float:right;
@@ -131,6 +139,10 @@ background-color:  white;
     margin-top:8px;
     margin-left:10px;
 }
+#gotop{
+    float:right;
+    margin-right:10px;
+}
 
 .fa-quote-left{
     margin-left:10px;
@@ -154,14 +166,52 @@ background-color:  white;
     position: relative;
     display:inline;
 }
-/*.report a{
-    color:#2f59c4;
+@media only screen and (max-width:400px){
+    #about{
+        visibility: hidden;
+    }
+    #reportus{
+        visibility:hidden;
+    }
+    .homeImg{
+        padding-left:0px;
+        height:60%;
+        width:100%;
+    }
+    #see{
+        visibility: hidden;
+    }
+    #make{
+        visibility:hidden;
+    }
+    #confessions{
+        margin-left:0px;
+        margin-right:0px;
+    }
+    .message{
+        margin-right:0px;
+    }
+    div.fixed{
+        font-size:65%;
+    }
 }
-.report a:hover{
-    color:#6f96fc;
-    text-decoration:none;
+@media only screen and (min-width:500px){
+    #main{
+        left:20%;
+    }
 }
-.report a:visited{
-    color:#00245e
-    text-decoration:none;
-}*/
+@media only screen and (min-width:600px){
+    #main{
+        left:30%;
+    }
+}
+@media only screen and (min-width:768px){
+    #main{
+        left:35%;
+    }
+} 
+@media only screen and (orientation:landscape and max-height:400px){
+    #main{
+        top:2%;
+    }
+}

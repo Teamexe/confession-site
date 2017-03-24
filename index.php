@@ -17,8 +17,6 @@
 	<meta charset="utf-8"/>
 	</head>
 	<body>
-	
-	<img class="logo" src="aboutusconfession/logo.png" alt="exe logo" style="width:15%;height:15%;">
         <div id="fb-root"></div>
         <script>(function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
@@ -36,6 +34,9 @@
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
 		<nav>
+            <span id="teamexe">
+                <img class="logo" src="aboutusconfession/logoc.png" alt="exe logo">
+            </span>
             <span id="about">
 				<a href="aboutusconfession/about.html">ABOUT US</a>
             </span>
@@ -51,7 +52,8 @@
 		</div>
         <div class="fixed" align="center">
              <i class="fa fa-copyright" aria-hidden="true"></i>
-                    : 2017 | Designed, Developed & Hosted by Team .EXE
+                    : 2017 | Designed, Developed & Hosted by
+                <a href="http://exe.nith.ac.in">Team.exe</a>
                     <a href="https://www.facebook.com/teamexe/">
            <img id="fb" src="aboutusconfession/facebook.png" align="right" alt="facebook" onmouseover="bigImg(this)" onmouseout="normalImg(this)" title="Like us on facebook" style="width:2%;height:2%">
             </a>
@@ -89,8 +91,9 @@ function normalImg(x) {
                         <strong>
                              Confession #<?php echo $row['id'];?>
                         </strong>
-                        <span>
-                        <a href="#mycreation">go to top</a></span>
+                        <span id="gotop">
+                            <a href="#mycreation">Go to top</a>
+                        </span>
                     </div>
                     <div class="message">
                         <i class="fa fa-quote-left fa-2x" aria-hidden="true"></i>
