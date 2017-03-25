@@ -1,3 +1,4 @@
+
 *{
 	box-sizing:border-box;
     margin:0px;
@@ -9,82 +10,93 @@ html,body
     height: 100%;
     margin: 0px;
     padding: 0px;
-   overflow-x: hidden;
+  overflow-x: hidden;
 }
-body
-{
-	padding-top:10px;
+/*body{
+    background-color:#c5d3dd;
+}*/
+nav{
+    position:fixed;
+    z-index:2;
+    margin-left:1%;
+    margin-bottom:10px;
+	width:96.5%;
+    background-color:#bac2d6;
+    opacity:0.8;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
 }
 
-nav{
-    margin-top:10px;
-    margin-bottom:10px;
-	width:100%;
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    background-color: #ddd;
+    color: #000;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.menu{
+    font-size:30px;
+}
+#main {
+    transition: margin-left .5s;
+    padding: 10px;
 }
 #teamexe{
     position:relative;
-    margin-left:4%;
+    margin-left:3%;
 }
 .logo{
-    height: 15%;
-    width:20%;
+    height: 15px;
+    width:150px;
+    height:80px;
 }
-#reportus{	
+#plustag{
+    display:none;
+    margin-top:4%;
+}
+#plusmake{
+    display:none;
+}
+#makeConfess{
     float:right;
-    padding:5px;
-    background-color:#79797c;
-	border:3px solid #79797c;
-	border-radius:5px;
-}
-#about{	
-    float:right;
-	margin-left:25px;
-    margin-right:5%;
-    padding:5px;
-	background-color:#79797c;
-	border:3px solid #79797c;
-	border-radius:5px;
-}
-#about a{
-	padding:8px;
-	text-decoration:none;
-	color:white;
-}
-#about a:hover{
-	padding:8px;
-	text-decoration:none;
-	color:white;
-}
-#about a:visited{
-    padding:8px;
-    text-decoration:none;
-	color:white;
-}
-#reportus a{
-	padding:8px;
-	text-decoration:none;
-	color:white;
-}
-#reportus a:hover{
-	padding:8px;
-	text-decoration:none;
-	color:white;
-}
-#reportus a:visited{
-    padding:8px;
-    text-decoration:none;
-	color:white;
+    margin-right:30px;
+    margin-top:1%;
 }
 #mycreation{
     width:100%;
+    margin-top:8%;
 }
 .homeImg{
     padding-top:0px;
-    padding-left:39px;
+    padding-left:10px;
 	padding-bottom:0px;
 	padding-right:0px;
     height:85%;
-    width:95%;
+    width:99%;
 }
 
 /*#see{
@@ -112,24 +124,19 @@ background-color:  white;
  bottom: 0;
  width: 100%;
  border: 3px solid black;
-    z-index:10;
+z-index:10;
+opacity:0.7;
 }
 .conf{
     position:relative;
     display:block;
     margin-bottom:20px;
-    width:95%;
+    width:100%;
     min-height:100px;
     border:3px solid rgba(88, 62, 126, 0.2);
     border-radius:10px;
     background-color: rgba(88, 62, 126, 0.2);
 }
-/*.messageno{
-    position:relative;
-    display:block;
-    margin-left:8px;
-    margin-top:5px;
-}*/
 .message{
     position:relative;
     display:block;
@@ -164,44 +171,51 @@ background-color:  white;
 .fb-like{
     margin-left:8px;
 }
-.report{
-    position:relative;
-    display:inline;
-    margin-left:90%;
-    text-decoration:none;
-}
-.formreport{
-    position: relative;
-    display:inline;
-}
 @media only screen and (max-width:400px){
     body{
-        padding-top: 0px;
+        font-size:15px;
     }
     nav{
-        margin-top:0px;
-        margin-bottom:0px;
+        margin-left:0%;
+    }
+    .sidenav a{
+       font-size:15px; 
+    }
+    .sidenav .closebtn{
+        font-size:15px;
+        padding:5px;
+    }
+    .menu{
+        font-size:15px;
     }
     .logo{
         width:25%;
         height:10%;
     }
-    #about{
-        visibility: hidden;
+    #plustag{
+        float:right;
+        margin-right: 6%;
+        display:inline;
     }
-    #reportus{
+    #plusmake{
+        display:block;
         visibility:hidden;
+        color:white;
+        margin-left:60%;
+        margin-top:11%;
+        z-index:3;
+        transition: 0.3s;
+    }
+    #makeConfess{
+        display:none;
     }
     .homeImg{
         padding-left:0px;
         height:60%;
         width:100%;
     }
-    #see{
-        visibility: hidden;
-    }
-    #make{
-        visibility:hidden;
+    #icons{
+    visibility:hidden;
     }
     .conf{
         margin-right:0px;
