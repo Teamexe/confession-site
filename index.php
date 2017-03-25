@@ -65,31 +65,31 @@
             <span id="teamexe">
                 <img class="logo" src="aboutusconfession/logoc.png" alt="exe logo">
             </span>
-            <span id="plustag">
-                <a href="#" class="plusbutton" onClick="dropdown()">     <i class="fa fa-plus" aria-hidden="true"></i>
+            <span class="dropdown">
+                <a href="#" class="dropbutton">    
+                    <i class="fa fa-plus" aria-hidden="true"></i>
                     <i class="fa fa-caret-down" aria-hidden="true"></i>
                 </a>
+                 <div class="dropdown-content">
+                     <a href="makeConfess.php">Make Confession</a>
+                </div>
             </span>
             <span id="makeConfess" >
                 <a role="button" class="btn btn-lg btn-primary" href="makeConfess.php">Make Confession</a>
             </span>
         </nav>
-        <div id="plusmake">
-            Make Confession
-        </div>
-        <script>
-            function dropdown(){
-                document.getElementById("plusmake").style.visibility="visible";
-            }
-        </script>
+        
+<!-- for slider-->
 		<div id="mycreation">
             <img class="homeImg" src=images/confession.jpg>
 		</div>
+
+    <!-- for footer-->
         <div class="fixed" align="center">
              <i class="fa fa-copyright" aria-hidden="true"></i>
                     : 2017 | Designed, Developed & Hosted by
                 <a href="http://exe.nith.ac.in">Team.exe</a>
-            <div id="icons">
+            <span id="icons">
                 <a href="https://www.facebook.com/teamexe/">
                <img id="fb" src="aboutusconfession/facebook.png" align="right" alt="facebook" onmouseover="bigImg(this)" onmouseout="normalImg(this)" title="Like us on facebook" style="width:2%;height:2%">
                 </a>
@@ -101,7 +101,7 @@
                 <a href="https://www.instagram.com/teamexenith/">
                <img src="aboutusconfession/insta.png" align="right" alt="instagram" onmouseover="bigImg(this)" onmouseout="normalImg(this)" title="Follow us on Instagram" style="width:2%;height:2%">
                 </a>
-            </div>
+            </span>
      </div>
         
         <script>
