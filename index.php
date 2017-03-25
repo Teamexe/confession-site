@@ -16,7 +16,8 @@
 		</title>
 	<meta charset="utf-8"/>
 	</head>
-	<body>
+	<body style=" background-color:#c5d3dd">
+        <!--script for facebook plugins-->
         <div id="fb-root"></div>
         <script>(function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
@@ -33,12 +34,54 @@
           js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
-		<nav>
+        
+        
+        <!--code for nav bar-->
+        <nav>
+            <div id="mySidenav" class="sidenav">
+                <a href="#"class="closebtn" onclick="closeNav()">&times;</a>
+                <a href=".">Home</a>
+                <a href="aboutusconfession/about.html">About Us</a>
+                <a href="reportinfo.php">Report Us</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <span id="main">
+                <span class="menu" style="cursor:pointer" onclick="openNav()">&#9776;</span>
+            </span>
+            <script>
+                function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+                document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+                }
+
+                function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                    document.getElementById("main").style.marginLeft= "0";
+                    document.body.style.backgroundColor = "#c5d3dd";
+                }
+            </script>
+
             <span id="teamexe">
                 <img class="logo" src="aboutusconfession/logoc.png" alt="exe logo">
             </span>
-		</nav>
-		
+            <span id="plustag">
+                <a href="#" class="plusbutton" onClick="dropdown()">     <i class="fa fa-plus" aria-hidden="true"></i>
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </a>
+            </span>
+            <span id="makeConfess" >
+                <a role="button" class="btn btn-lg btn-primary" href="makeConfess.php">Make Confession</a>
+            </span>
+        </nav>
+        <div id="plusmake">
+            Make Confession
+        </div>
+        <script>
+            function dropdown(){
+                document.getElementById("plusmake").style.visibility="visible";
+            }
+        </script>
 		<div id="mycreation">
             <img class="homeImg" src=images/confession.jpg>
 		</div>
@@ -46,17 +89,19 @@
              <i class="fa fa-copyright" aria-hidden="true"></i>
                     : 2017 | Designed, Developed & Hosted by
                 <a href="http://exe.nith.ac.in">Team.exe</a>
-                    <a href="https://www.facebook.com/teamexe/">
-           <img id="fb" src="aboutusconfession/facebook.png" align="right" alt="facebook" onmouseover="bigImg(this)" onmouseout="normalImg(this)" title="Like us on facebook" style="width:2%;height:2%">
-            </a>
+            <div id="icons">
+                <a href="https://www.facebook.com/teamexe/">
+               <img id="fb" src="aboutusconfession/facebook.png" align="right" alt="facebook" onmouseover="bigImg(this)" onmouseout="normalImg(this)" title="Like us on facebook" style="width:2%;height:2%">
+                </a>
 
-            <a href="https://www.youtube.com/channel/UCTIpvLaM1G-uUsthgCDauKw">
-           <img src="aboutusconfession/youtube.png" align="right" alt="you tube" title="Subscibe us on you tube" onmouseover="bigImg(this)" onmouseout="normalImg(this)" style="width:2%;height:2%">
-            </a>
+                <a href="https://www.youtube.com/channel/UCTIpvLaM1G-uUsthgCDauKw">
+               <img src="aboutusconfession/youtube.png" align="right" alt="you tube" title="Subscibe us on you tube" onmouseover="bigImg(this)" onmouseout="normalImg(this)" style="width:2%;height:2%">
+                </a>
 
-            <a href="https://www.instagram.com/teamexenith/">
-           <img src="aboutusconfession/insta.png" align="right" alt="instagram" onmouseover="bigImg(this)" onmouseout="normalImg(this)" title="Follow us on Instagram" style="width:2%;height:2%">
-            </a>
+                <a href="https://www.instagram.com/teamexenith/">
+               <img src="aboutusconfession/insta.png" align="right" alt="instagram" onmouseover="bigImg(this)" onmouseout="normalImg(this)" title="Follow us on Instagram" style="width:2%;height:2%">
+                </a>
+            </div>
      </div>
         
         <script>
