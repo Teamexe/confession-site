@@ -37,18 +37,10 @@
             <span id="teamexe">
                 <img class="logo" src="aboutusconfession/logoc.png" alt="exe logo">
             </span>
-            <span id="about">
-				<a href="aboutusconfession/about.html">ABOUT US</a>
-            </span>
-            <span id="reportus">
-                <a href="reportinfo.php">REPORT US</a>
-            </span>
 		</nav>
 		
 		<div id="mycreation">
             <img class="homeImg" src=images/confession.jpg>
-            <a class="btn btn-lg btn-primary" id="see" href="#confessions" role="button">See confessions</a>
-            <a class="btn btn-lg btn-primary" id="make" href="makeConfess.php" role="button">Make confession</a>
 		</div>
         <div class="fixed" align="center">
              <i class="fa fa-copyright" aria-hidden="true"></i>
