@@ -5,14 +5,14 @@ Confession website will act as a platform for the students of the college to ack
 HTML, CSS, PHP, JS, SQL
 
 ##Contributing:
-1.Fork this repo
-2.Clone this repo
-3.change the localhost username, password, database name in almost all .php files according to your database.
-4.Run it using php -S localhost:8080.
-5.View the website by typing localhost:8080/confession-site on your web browser. 
-6.Checkout new branch: git checkout -b my_changes.
-7.Add new files via git add . if required.
-8.Commit the changes: git commit -m "your message describing what you did".
-9.Push to your remote: git push.
-10.Generate a pull request.
+1.Fork this repo<br />
+2.Clone this repo<br />
+3.change the localhost username, password, database name in almost all .php files according to your database.<br />
+4.Run it using php -S localhost:8080.<br />
+5.View the website by typing localhost:8080/confession-site on your web browser. <br />
+6.Checkout new branch: git checkout -b my_changes.<br />
+7.Add new files via git add . if required.<br />
+8.Commit the changes: git commit -m "your message describing what you did".<br />
+9.Push to your remote: git push.<br />
+10.Generate a pull request.<br />
 
