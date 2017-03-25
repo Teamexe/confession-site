@@ -1,10 +1,10 @@
 # confession-site
 Confession website will act as a platform for the students of the college to acknowledge any personal fact or admit any experience which they feel free to share with other students of the institute.Confession website acts as a medium for students to express their emotions, beliefs, and troubles anonymously. It will also act as a de facto message board where students can ask for help regarding any issues related to college affairs. Students can feel comfortable to reveal their thoughts due to the complete anonymity of their posts. Also secret admirers can address their crush through this website.
 
-##Technology stack:
+#Technology stack:
 HTML, CSS, PHP, JS, SQL
 
-##Contributing:<br /> <br />
+#Contributing:<br /> <br />
 1.Fork this repo<br /><br />
 2.Clone this repo<br /><br />
 3.change the localhost username, password, database name in almost all .php files according to your database.<br /><br />
