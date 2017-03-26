@@ -117,40 +117,65 @@ nav{
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
-#mycreation{
+/*#mycreation{
     width:100%;
     margin-top:8%;
+}*/
+.mySlides {display:none}
+
+.slideshow-container {
+    margin-top:8%;
+    margin-left:1%;
+    width:98%;
+  position: relative;
+    z-index:1;
 }
-.homeImg{
-    padding-top:0px;
-    padding-left:10px;
-	padding-bottom:0px;
-	padding-right:0px;
-    height:85%;
-    width:99%;
+.mainImg{
+    height: 70%;
+}
+.text {
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
 }
 
-/*#see{
-	position:absolute;
-	top:81%;
-	left:30%;
-}
-#make{
-	position:absolute;
-	top:81%;
-	left:48%;
-}*/
-#confessions{
+.dot {
     position:relative;
-    display:block;
-    margin-top: 70px;
-    margin-left:35px;
-    margin-right:35px;
+  height: 13px;
+  width: 13px;
+  margin: 0px 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 8s ease;
 }
+
+.active {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 8s;
+  animation-name: fade;
+  animation-duration: 8s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
 div.fixed {
 margin: 0%;
 background-color:  white; 
@@ -162,6 +187,16 @@ background-color:  white;
 z-index:10;
 opacity:0.7;
 }
+
+
+#confessions{
+    position:relative;
+    display:block;
+    margin-top: 70px;
+    margin-left:35px;
+    margin-right:35px;
+}
+
 .conf{
     position:relative;
     display:block;
@@ -208,7 +243,7 @@ opacity:0.7;
 }
 @media only screen and (max-width:670px){
     body{
-        font-size:15px;
+        font-size:12px;
     }
     nav{
         margin-left:0%;
@@ -234,33 +269,50 @@ opacity:0.7;
     #makeConfess{
         display:none;
     }
-    .homeImg{
-        padding-left:0px;
-        height:60%;
-        width:100%;
+    .mainImg{
+        height:40%;
+    }
+    .slideshow-container{
+        margin-top:20%;
+    }
+    .text{
+        visibility:hidden;
+    }
+    div.fixed{
+        font-size:65%;
     }
     #icons{
     visibility:hidden;
     }
+    #confessions{
+        margin-top: 10%; 
+        margin-right:2%;
+        margin-left:2%;
+    }
     .conf{
         margin-right:0px;
+        margin-bottom:3%;
+        min-height:0px;
     }
-    #confessions{
-        margin-left:0px;
-        margin-right:0px;
+    .title{
+        margin-top:1%;
+        margin-left:1%;
     }
     .message{
-        margin-right:0px;
-        margin-left:0px;
+        margin-right:1%;
+        margin-left:1%;
+        margin-top:1%;
+        margin-bottom: 2%;
+        min-height:50px;
     }
-    div.fixed{
-        font-size:65%;
+    .message i{
+        font-size: 100%;
     }
 }
 /*
 @media only screen and (min-width:600px){
     #main{
-        left:30%;
+        left:30p
     }
 }
 @media only screen and (min-width:768px){
