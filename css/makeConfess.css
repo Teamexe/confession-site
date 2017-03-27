@@ -2,12 +2,13 @@
 	box-sizing:border-box;
     margin:0px;
 	padding:0px;
+    font-size:12px;
 }
-
 #main{
     position:absolute;
-    top:5%;
-    left:5%;
+    top:2%;
+    left:1%;
+    right:1%;
     padding:15px 15px;
     background-color: rgba(88, 62, 126, 0.2);
     border: 1px solid rgba(86, 61, 124, .2);
@@ -21,30 +22,44 @@
 .input .inpf{
     padding: 6px 12px;
 }
-/*.extra{  
-    margin-left:5px;
-}*/
 #submission{
-    margin-left:70px;
+    margin-left:12px;
+}
+table.mceLayout, textarea.tinyMCE {
+    width: 100%;
 }
 @media only screen and (min-width:400px){
     #main{
-        left:10%;
+        left:1%;
     }
 }
 @media only screen and (min-width:500px){
-    #main{
-        left:20%;
+    *{
+        font-size:15px;
+    }
+     table.mceLayout, textarea.richEditor {
+       width: 600px;
     }
 }
 @media only screen and (min-width:600px){
     #main{
-        left:30%;
+        left:2%;
+        right:2%;
+    }
+    table.mceLayout, textarea.richEditor {
+       width: 600px;
     }
 }
 @media only screen and (min-width:768px){
+    *{
+        font-size:18px;
+    }
     #main{
-        left:35%;
+        left:5%;
+        right:5%;
+    }
+    table.mceLayout, textarea.richEditor {
+       width: 600px;
     }
 } 
 @media only screen and (orientation:landscape and max-height:400px){

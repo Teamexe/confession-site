@@ -6,16 +6,16 @@
 <html>
     <head>
         <title> reporting page</title>
-        <link rel="stylesheet" href="css/makeConfess.css">
         <link rel="stylesheet" href="css/reportinfo.css">
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="font-awesome/css/font-awesome-animation.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="jquery/jquery-3.2.0.min.js">
         </script>
         <meta charset="utf-8"/>
     </head>
-    <body>
+    <body style="background-color:#66e0ff;">
         <?php
             $id="";
             $name="";
@@ -75,7 +75,12 @@
             }
         ?>
         <div id="info">
-            To report a message please type the Confession id and to report anything else submit the message without any confession id
+            <div id="mainContent">
+                <i class="fa fa-exclamation-triangle faa-flash animated" aria-hidden="true"></i>
+                <span id="warning">
+                To report a message please type the Confession id and to report anything else submit the message without any confession id
+                </span>
+            </div>
         </div>
         <div id="main">
             <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
