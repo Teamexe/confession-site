@@ -1,6 +1,7 @@
 <?php
-    $db=mysqli_connect("localhost", "root", "Sourav123@", "confessionsite")
-      or die('Error connecting to database');
+   include_once 'includes/sql_config.php';
+  $db=mysqli_connect(HOST, USER, PASSWORD, DATABASE)
+              or die('Error connecting to database');
     $query="select id, email, message, report from adminperm
             where permission=1 and report>0 order by report desc";
     $result=mysqli_query($db, $query);

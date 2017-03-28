@@ -192,7 +192,7 @@ opacity:0.7;
 #confessions{
     position:relative;
     display:block;
-    margin-top: 70px;
+    margin-top: 8%;
     margin-left:35px;
     margin-right:35px;
 }
@@ -215,9 +215,8 @@ opacity:0.7;
     margin-top:5px;
     margin-bottom:15px;
     min-height:100px;	
-	border:3px solid #79797c;
     border-radius:10px;
-    background-color: #79797c;
+    background-color: white;
     opacity:0.85;
 }
 .title{
@@ -235,8 +234,10 @@ opacity:0.7;
     margin-top:8px;
 }
 .orimess{
-    color:beige;
+    color:black;
+    margin-left:4%;
     margin-top:8px;
+    margin-bottom:2%;
 }
 .fb-like{
     margin-left:8px;
@@ -285,7 +286,7 @@ opacity:0.7;
     visibility:hidden;
     }
     #confessions{
-        margin-top: 10%; 
+        margin-top: 20%; 
         margin-right:2%;
         margin-left:2%;
     }
@@ -307,6 +308,9 @@ opacity:0.7;
     }
     .message i{
         font-size: 100%;
+    }
+    .orimess{
+        margin-left:6%;
     }
 }
 /*

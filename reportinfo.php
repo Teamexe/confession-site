@@ -1,6 +1,7 @@
 <?php
-    $db=mysqli_connect("localhost", "root", "Sourav123@", "confessionsite")
-                or die('Error connecting to database');
+    include_once 'includes/sql_config.php';
+  $db=mysqli_connect(HOST, USER, PASSWORD, DATABASE)
+              or die('Error connecting to database');
 ?>
 
 <html>
@@ -15,7 +16,7 @@
         </script>
         <meta charset="utf-8"/>
     </head>
-    <body style="background-color:#66e0ff;">
+    <body style="background-color:lavender;">
         <?php
             $id="";
             $name="";

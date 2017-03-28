@@ -1,5 +1,6 @@
 <?php
-  $db=mysqli_connect("localhost", "root", "Sourav123@", "confessionsite")
+    include_once 'includes/sql_config.php';
+  $db=mysqli_connect(HOST, USER, PASSWORD, DATABASE)
               or die('Error connecting to database');
 ?>
 <html>
@@ -44,8 +45,8 @@
                 <a href="#"class="closebtn" onclick="closeNav()">&times;</a>
                 <a href=".">Home</a>
                 <a href="aboutusconfession/about.html">About Us</a>
-                <a href="reportinfo.php">Report Us</a>
-                <a href="#">Contact Us</a>
+                <a href="reportinfo.php">Report Confession</a>
+                <a href="http://exe.nith.ac.in/contact.php">Contact Us</a>
             </div>
             <span id="main">
                 <span class="menu" style="cursor:pointer" onclick="openNav()">&#9776;</span>
@@ -82,7 +83,7 @@
             </span>
         </nav>
 
-        <!-- for slider-->
+        <!-- for slider
         
         <div class="slideshow-container">
 
@@ -132,7 +133,7 @@
                 dots[slideIndex-1].className += " active";
                 setTimeout(showSlides, 7800); // Change image every 2 seconds
             }
-        </script>
+        </script>-->
 
         <!-- for footer-->
         
@@ -186,9 +187,9 @@
                         </div>
                          <div class="message">
                             <i class="fa fa-quote-left fa-2x" aria-hidden="true"></i>
-                            <span class="orimess">
+                            <div class="orimess">
                                 <?php echo htmlspecialchars_decode(stripslashes($row['message']));?>
-                             </span>
+                             </div>
                             <?php $id=$row['id'];?>
                         </div>
                         <div class="fb-like" data-href="https://localhost/confession/#<?php echo $id?>" data-width="5" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
