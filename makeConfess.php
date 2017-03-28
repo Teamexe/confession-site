@@ -12,9 +12,10 @@
             selector: "textarea",   
              plugins: [
             'advlist autolink lists link image charmap print preview hr anchor pagebreak',
-            'searchreplace wordcount visualblocks visualchars fullscreen',
+            'searchreplace wordcount visualblocks visualchars fullscreen autoresize',
             'insertdatetime media nonbreaking save table contextmenu directionality',
             'emoticons template paste textcolor colorpicker textpattern imagetools toc'
+            
             ],
               toolbar1: 'undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
               toolbar2: 'preview media | forecolor backcolor emoticons',
@@ -31,6 +32,7 @@
                  statusbar:false,
                 toolbar_items_size: 'small',
                 height: "300",
+                plugin_preview_width: 300
             });
     </script>
     </head>
@@ -38,12 +40,12 @@
         <div id="main"> 
             <div id="reqd">
                 <strong>
-                    Please enter your email id to get notifications about your confession although it is fully optional
+                    Confession generator
                 </strong>
             </div>
             <form role="form" action="confessdb.php" method="post" >
                 <div class="input">
-                    <input type="text" name="email" class="inpf" placeholder="Enter email id"> 
+                    <input type="text" name="email" class="inpf" placeholder="Enter email id (optional)"> 
                 </div>
                 <div class="input">
                     <label for="message">

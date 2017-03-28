@@ -4,8 +4,9 @@
     $branch="";
     $email="";
     $message="";
-  $db=mysqli_connect("localhost", "root", "Sourav123@", "confessionsite")
-      or die('Error connecting to database');
+  include_once 'includes/sql_config.php';
+  $db=mysqli_connect(HOST, USER, PASSWORD, DATABASE)
+              or die('Error connecting to database');
     $email=mysqli_real_escape_string($db,$_POST["email"]);
     $email=test_input($email);
     $message=mysqli_real_escape_string($db,$_POST["confmsg"]);
