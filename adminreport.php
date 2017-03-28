@@ -1,7 +1,7 @@
 <?php
     $db=mysqli_connect("localhost", "root", "Sourav123@", "confessionsite")
       or die('Error connecting to database');
-    $query="select * from adminperm
+    $query="select id, email, message, report from adminperm
             where permission=1 and report>0 order by report desc";
     $result=mysqli_query($db, $query);
     if(!$result)die ("Database access failed:". mysql_error());
@@ -12,30 +12,6 @@
             <?php
             while($row=mysqli_fetch_array($result))
             {?>
-                <div class="name">
-                    <span> Name:</span> 
-                    <span>
-                        <?php
-                            echo $row['name'];
-                        ?>
-                    </span>
-                </div>
-                <div class="year">
-                    <span> Year:</span> 
-                    <span>
-                        <?php
-                            echo $row['year'];
-                        ?>
-                    </span>
-                </div>
-                <div class="branch">
-                <span> branch:</span> 
-                    <span>
-                        <?php
-                            echo $row['branch'];
-                        ?>
-                    </span>
-                </div>
                 <div class="email">
                 <span> email:</span> 
                     <span>

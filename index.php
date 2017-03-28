@@ -187,8 +187,8 @@
                          <div class="message">
                             <i class="fa fa-quote-left fa-2x" aria-hidden="true"></i>
                             <span class="orimess">
-                                <?php echo $row['message']?>
-                            </span>
+                                <?php echo htmlspecialchars_decode(stripslashes($row['message']));?>
+                             </span>
                             <?php $id=$row['id'];?>
                         </div>
                         <div class="fb-like" data-href="https://localhost/confession/#<?php echo $id?>" data-width="5" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
