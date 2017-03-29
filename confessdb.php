@@ -23,7 +23,7 @@
         return $data;
     }
     if($message){
-        $sql="INSERT INTO adminperm (email, message) values ('$email',' $message')";
+        $sql="INSERT INTO adminperm (email, message, permission) values ('$email',' $message',1)";
         if(mysqli_query($db,$sql))
         {
             echo "<center>Your message has been sent to the admin for a review process<br>You're being redirected to main page within 5 seconds</center>";
