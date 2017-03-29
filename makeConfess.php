@@ -32,7 +32,7 @@
                  statusbar:false,
                 toolbar_items_size: 'small',
                 height: "300",
-                plugin_preview_width: 300
+                plugin_preview_width: 250
             });
     </script>
     </head>

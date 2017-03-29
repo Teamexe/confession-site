@@ -89,25 +89,25 @@
                     Enter confession id without #
                 </label>
                 <div class="input">
-                    <input class="inpf" name="confessionid" type="text" placeholder="" value="<?php echo $id?>">
+                    <input class="inpf" name="confessionid" size="25" type="text" placeholder="" value="<?php echo $id?>">
                 </div>
                 <div class="input">
-                    <input type="text"  class="inpf" name="name"  placeholder="Enter name" value="<?php echo $name?>">
+                    <input type="text"  class="inpf" name="name" size="25"  placeholder="Enter name" value="<?php echo $name?>">
                 </div>
                 <div class="input">
-                    <input type="text" name="year" class="inpf" placeholder="Enter Year" value="<?php echo $year?>"> 
+                    <input type="text" name="year" class="inpf" size="25" placeholder="Enter Year" value="<?php echo $year?>"> 
                 </div>
                 <div class="input">
-                    <input type="text" name="branch" class="inpf" placeholder="Enter branch" value="<?php echo $branch?>">
+                    <input type="text" name="branch" class="inpf" size="25" placeholder="Enter branch" value="<?php echo $branch?>">
                 </div>
                 <div class="input">
-                    <input type="text" name="email" class="inpf" placeholder="Enter email id " value="<?php echo $email?>"> 
+                    <input type="text" name="email" class="inpf" size="25" placeholder="Enter email id " value="<?php echo $email?>"> 
                 </div>
                 <div class="input">
                     <label for="report">
                          What is the report?
                     </label><br>
-                    <textarea class="inpf" name="report" rows="5"><?php echo $report?></textarea>
+                    <textarea class="inpf" name="report" rows="5" cols="25"><?php echo $report?></textarea>
                 </div>
                 <input type="submit" class="btn btn-info" id="submission" value="Submit" name="submit"> 
             </form>
