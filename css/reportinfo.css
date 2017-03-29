@@ -41,12 +41,16 @@ body{
     margin-left:5px;
 }*/
 #submission{
-    margin-left:70px;
+    margin-left:90px;
     background-color:#0033cc;
 }
 @media only screen and (min-width:400px){
+   *{
+        font-size:15px;
+    }
     #main{
-        left:10%;
+        top:10%;
+        left:5%;
     }
 }
 @media only screen and (min-width:500px){
@@ -55,23 +59,23 @@ body{
     }
     #main{
         top:19%;
-        left:20%;
+        left:10%;
     }
 }
 @media only screen and (min-width:600px){
     #main{
-        top:16%;
-        left:30%;
+        top:26%;
+        left:20%;
     }
 }
 @media only screen and (min-width:768px){
     #main{
         left:35%;
-        top:10%;
+        top:30%;
     }
 } 
 @media only screen and (orientation:landscape and max-height:400px){
     #main{
-        top:2%;
+        top:3%;
     }
 }
