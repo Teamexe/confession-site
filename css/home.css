@@ -25,6 +25,7 @@ nav{
     opacity:0.8;
 }
 .sidenav {
+    
     height: 100%;
     width: 0;
     position: fixed;

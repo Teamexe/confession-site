@@ -22,7 +22,7 @@ body{
 }
 #main{
     position:absolute;
-    top:23%;
+    top:15%;
     left:6%;
     padding:15px 15px;
     background-color: rgba(88, 62, 126, 0.2);
@@ -49,7 +49,7 @@ body{
         font-size:15px;
     }
     #main{
-        top:10%;
+        top:18%;
         left:5%;
     }
 }
@@ -58,7 +58,7 @@ body{
         font-size:15px;
     }
     #main{
-        top:19%;
+        top:22%;
         left:10%;
     }
 }
@@ -71,11 +71,14 @@ body{
 @media only screen and (min-width:768px){
     #main{
         left:35%;
-        top:30%;
+        top:12%;
     }
-} 
+}
+@media only screen and (orientation:landscape and max-height:600px){
+    #main{top:20%;}
+}
 @media only screen and (orientation:landscape and max-height:400px){
     #main{
-        top:3%;
+        top:10%;
     }
 }
