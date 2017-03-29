@@ -65,7 +65,7 @@
             </script>
 
             <span id="teamexe">
-                <img class="logo" src="about/logoc.png" alt="exe logo">
+                <a href="index.php"><img class="logo" src="about/logoc.png" alt="exe logo"></a>
             </span>
             
             <span class="dropdown">

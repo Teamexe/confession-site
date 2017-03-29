@@ -27,6 +27,8 @@
             $id=$_POST['confessionid'];
             $sql="update adminperm set report=report + 1 where id=$id and permission=1;";
             mysqli_query($db, $sql);
+            header( "refresh:5;url=index.php" );
+            /*
             $name=$_POST['name'];
             $year=$_POST['year'];
             $branch=$_POST['branch'];
@@ -74,14 +76,23 @@
                 else{
                     $message="your report can't be sent to the admin2";
                     echo "<script> alert('$message');</script>"; 
-                }*/
-            }
+                }
+            }*/
         ?>
         <div id="info">
             <div id="mainContent">
                 <i class="fa fa-exclamation-triangle faa-flash animated" aria-hidden="true"></i>
                 <span id="warning">
-                To report a message please type the Confession id and to report anything else submit the message without any confession id
+                <?php
+                        if (!isset($id)) 
+                        {
+                            echo "To report a confession please type the Confession id else submit without it";
+                        }
+                        else
+                        {
+                            echo "<center>Thanks for reporting. Your contribution matters.</center>";
+                        }
+                ?>
                 </span>
             </div>
         </div>
