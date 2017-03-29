@@ -18,6 +18,8 @@
         $data = trim($data);
         $data = stripslashes($data);
         $data = htmlspecialchars($data);
+        //fixed a bug which was cousing "rn" to appear whenever "enter" key is pressed
+        $data = preg_replace( "/rn/", " ", $data );
         return $data;
     }
     if($message){

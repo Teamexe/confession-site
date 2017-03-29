@@ -38,18 +38,10 @@
     </head>
     <body>
         <div id="main"> 
-            <div id="reqd">
-                <strong>
-                    Confession generator
-                </strong>
-            </div>
             <form role="form" action="confessdb.php" method="post" >
                 <div class="input">
-                    <input type="text" name="email" class="inpf" placeholder="Enter email id (optional)"> 
-                </div>
-                <div class="input">
                     <label for="message">
-                        <strong>Confession:</strong>
+                        <strong>Confess here</strong>
                     </label><br>
                     <textarea class="inpf" name="confmsg" rows="10" cols="10">
                     </textarea>
