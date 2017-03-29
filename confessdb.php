@@ -26,13 +26,13 @@
         $sql="INSERT INTO adminperm (email, message, permission) values ('$email',' $message',1)";
         if(mysqli_query($db,$sql))
         {
-            echo "<center>Your message has been sent to the admin for a review process<br>You're being redirected to main page within 5 seconds</center>";
-            header( "refresh:5;url=index.php" );
+            echo "<center>Your confession has been posted</center>";
+            header( "refresh:1;url=index.php" );
         }
         
         else
         {
-            echo "Sorry we are not able to send the data";
+            echo "<center>Sorry sending failed<br></center>";
         }
         /*$emailid1="sahoosourav1996@gmail.com";
         $emailid2="ankitguleria1@gmail.com";
