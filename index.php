@@ -193,8 +193,8 @@
                              </div>
                             <?php $id=$row['id'];?>
                         </div>
-                        <div class="fb-like" data-href="https://localhost/confession/#<?php echo $id?>" data-width="5" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-            <div class="fb-comments" id="<?php echo $id;?>"data-href="http://localhost/confession/#<?php echo $id?>" data-width="100%" data-numposts="3">
+                        <div class="fb-like" data-href="http://exe.nith.ac.in/confess/#<?php echo $id?>" data-width="5" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+            <div class="fb-comments" id="<?php echo $id;?>"data-href="http://exe.nith.ac.in/confess/#<?php echo $id?>" data-width="100%" data-numposts="3">
                         </div>
                     </div>                  
                 <?php }?>
