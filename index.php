@@ -44,8 +44,7 @@
             <div id="mySidenav" class="sidenav">
                 <a href="#"class="closebtn" onclick="closeNav()">&times;</a>
                 <a href=".">Home</a>
-                <a href="aboutusconfession/about.html">About Us</a>
-                <a href="reportinfo.php">Report Confession</a>
+                <a href="about/index.html">About Us</a>
                 <a href="http://exe.nith.ac.in/contact.php">Contact Us</a>
             </div>
             <span id="main">
@@ -66,7 +65,7 @@
             </script>
 
             <span id="teamexe">
-                <img class="logo" src="aboutusconfession/logoc.png" alt="exe logo">
+                <img class="logo" src="about/logoc.png" alt="exe logo">
             </span>
             
             <span class="dropdown">
@@ -76,10 +75,12 @@
                 </a>
                 <div class="dropdown-content">
                     <a href="makeConfess.php">Confess here</a>
+                    <a href="reportinfo.php">Report Confession</a>
                 </div>
             </span>
             <span id="makeConfess" >
                 <a role="button" class="btn btn-lg btn-primary" href="makeConfess.php">Confess here</a>
+                <a role="button" class="btn btn-lg btn-primary" href="reportinfo.php">Report Confession</a>
             </span>
         </nav>
 
@@ -143,21 +144,21 @@
             <a href="http://exe.nith.ac.in">Team.exe</a>
             <span id="icons">
                 <a href="https://www.facebook.com/teamexe/">
-                    <img id="fb" src="aboutusconfession/facebook.png" align="right" alt="facebook" onmouseover="bigImg(this)" onmouseout="normalImg(this)" title="Like us on facebook" style="width:2%;height:2%">
+                    <img id="fb" src="about/facebook.png" align="right" alt="facebook" onmouseover="bigImg(this)" onmouseout="normalImg(this)" title="Like us on facebook" style="width:2%;height:2%">
                 </a>
 
                 <a href="https://www.youtube.com/channel/UCTIpvLaM1G-uUsthgCDauKw">
-                    <img src="aboutusconfession/youtube.png" align="right" alt="you tube" title="Subscibe us on you tube" onmouseover="bigImg(this)" onmouseout="normalImg(this)" style="width:2%;height:2%">
+                    <img src="about/youtube.png" align="right" alt="you tube" title="Subscibe us on you tube" onmouseover="bigImg(this)" onmouseout="normalImg(this)" style="width:2%;height:2%">
                 </a>
 
                 <a href="https://www.instagram.com/teamexenith/">
-                    <img src="aboutusconfession/insta.png" align="right" alt="instagram" onmouseover="bigImg(this)" onmouseout="normalImg(this)" title="Follow us on Instagram" style="width:2%;height:2%">
+                    <img src="about/insta.png" align="right" alt="instagram" onmouseover="bigImg(this)" onmouseout="normalImg(this)" title="Follow us on Instagram" style="width:2%;height:2%">
                 </a>
             </span>
         </div>
         <script>
             function bigImg(x) {
-                x.style="width:3%;height:3%";
+                x.style="width:2%;height:2%";
             }
             function normalImg(x) {
                 x.style="width:2%;height:2%"
@@ -193,7 +194,7 @@
                             <?php $id=$row['id'];?>
                         </div>
                         <div class="fb-like" data-href="https://localhost/confession/#<?php echo $id?>" data-width="5" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-                        <div class="fb-comments" id="<?php echo $id;?>"data-href="https://localhost/confession/#<?php echo $id?>" data-width="100%" data-numposts="3">
+            <div class="fb-comments" id="<?php echo $id;?>"data-href="http://localhost/confession/#<?php echo $id?>" data-width="100%" data-numposts="3">
                         </div>
                     </div>                  
                 <?php }?>

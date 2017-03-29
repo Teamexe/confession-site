@@ -33,12 +33,14 @@
             $email=$_POST['email'];
             $report=$_POST['report'];
             $string=$name." of ".$branch." of year ".$year." complained about confession ".$id." report: ".$report." email id:".$email;
-            if($name=="" || $year=="" || $branch==""||$email==""){
+            if($name=="" || $year=="" || $branch==""||$email=="")
+            {
                 $message="Please enter all the required fields";
                 echo "<script> alert('$message');</script>"; 
             }
-            else{
-                $email1="sahoosourav1996@gmail.com";
+            else
+            {
+                /*$email1="sahoosourav1996@gmail.com";
                 $email2="ankitguleria1@gmail.com";
                $string=wordwrap($string,70);
                 if($id!=""){
@@ -72,7 +74,7 @@
                 else{
                     $message="your report can't be sent to the admin2";
                     echo "<script> alert('$message');</script>"; 
-                }
+                }*/
             }
         ?>
         <div id="info">
