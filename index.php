@@ -14,7 +14,7 @@
 		<script src="jquery/jquery-3.2.0.min.js">
 		</script>
 		<title>
-			Confession Website
+			Team .EXE - Confession Website
 		</title>
 	<meta charset="utf-8"/>
 	</head>
@@ -75,11 +75,11 @@
                     <i class="fa fa-caret-down" aria-hidden="true"></i>
                 </a>
                 <div class="dropdown-content">
-                    <a href="makeConfess.php">Make Confession</a>
+                    <a href="makeConfess.php">Confess here</a>
                 </div>
             </span>
             <span id="makeConfess" >
-                <a role="button" class="btn btn-lg btn-primary" href="makeConfess.php">Make Confession</a>
+                <a role="button" class="btn btn-lg btn-primary" href="makeConfess.php">Confess here</a>
             </span>
         </nav>
 
