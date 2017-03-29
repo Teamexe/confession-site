@@ -20,7 +20,7 @@
 	</head>
 	<body style=" background-color:white">
         <!--script for facebook plugins-->
-        <div id="fb-root"></div>
+<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -28,6 +28,7 @@
   js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+
 
 
         <!--code for nav bar-->
@@ -185,9 +186,8 @@
                              </div>
                             <?php $id=$row['id'];?>
                         </div>
-                        <!-- Facebook like & comment plugin -->
-            <div class="fb-like" data-href="http://exe.nith.ac.in/confess/index.php" data-width="100" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
-            <div class="fb-comments" data-href="http://exe.nith.ac.in/confess/index.php" data-width="100%" data-numposts="100"></div>
+                        <div class="fb-like" data-href="http://exe.nith.ac.in/confess/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+                        <div class="fb-comments" id="<?php echo $id;?>" data-href="http://exe.nith.ac.in/confess/#<?php echo $id; ?>" data-width="100%" data-numposts="100">
                         </div>
                     </div>                  
                 <?php }?>
