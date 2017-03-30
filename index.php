@@ -166,17 +166,19 @@
                 $query="select * from adminperm
                         where permission=1 order by id desc";
                 $result=mysqli_query($db, $query);
+                $counter=-1;
                 if(!$result)die ("Database access failed:". mysql_error());
                 while($row=mysqli_fetch_array($result))
                 {?>
-
-                    <div class="conf">
+                    <?php if($counter==-1)
+                        $counter=$row['id']?>
+                    <div class="conf" id="conf<?php echo $row['id']?>">
                         <div class="title">
                             <strong>
                                  Confession #<?php echo $row['id'];?>
                             </strong>
                             <span id="gotop">
-                                <a href="#mycreation">Go to top</a>
+                                <a href="#conf<?php echo $counter;?>">Go to top</a>
                             </span>
                         </div>
                          <div class="message">
