@@ -3,22 +3,24 @@
 $db=mysqli_connect(HOST, USER, PASSWORD, DATABASE)
               or die('Error connecting to database');
 ?>
-<html>
-	<head>
-		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/home.css">
-        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="font-awesome/css/font-awesome-animation.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-		<script src="jquery/jquery-3.2.0.min.js">
-		</script>
-		<title>
-			Team .EXE - Confession Website
-		</title>
-	<meta charset="utf-8"/>
-	</head>
-	<body style=" background-color:#f7b9cb">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Confession site by - Team .EXE">
+    <meta name="author" content="Team .EXE">
+    <link rel="icon" href="exe.nith.ac.in/images/confess.png">
+
+    <title>Confess - Team .EXE</title>
+
+<?php 
+      include_once('stylesheets.php');
+      echo "</head>";
+      include_once('header.php');
+?>   
+	  <body>
         <!--script for facebook plugins-->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -77,78 +79,7 @@ $db=mysqli_connect(HOST, USER, PASSWORD, DATABASE)
             </span>
         </nav>
 
-        <!-- for slider
         
-        <div class="slideshow-container">
-
-            <div class="mySlides fade">
-              <img class="mainImg" src="images/confess10.jpg" style="width:100% ">
-              <div class="text"><a href="#confessions"><i class="fa fa-angle-double-down faa-vertical animated hover fa-3x"></i></a>
-                </div>
-            </div>
-            
-            <div class="mySlides fade">
-              <img class="mainImg" src="images/confess14.jpg" style="width:100%">
-              <div class="text"><a href="#confessions"><i class="fa fa-angle-double-down faa-vertical animated hover fa-3x"></i></a>
-                </div>
-            </div>
-
-            <div class="mySlides fade">
-              <img class="mainImg" src="images/confess15.jpg" style="width:100%">
-              <div class="text"><a href="#confessions"><i class="fa fa-angle-double-down faa-vertical animated hover fa-3x"></i></a>
-                </div>
-            </div>
-
-            </div>
-            <br>
-
-            <div style="text-align:center">
-              <span class="dot"></span> 
-              <span class="dot"></span> 
-              <span class="dot"></span> 
-        </div>
-        <script>
-            var slideIndex = 0;
-            showSlides();
-
-            function showSlides() {
-                var i;
-                var slides = document.getElementsByClassName("mySlides");
-                var dots = document.getElementsByClassName("dot");
-                for (i = 0; i < slides.length; i++) {
-                   slides[i].style.display = "none";  
-                }
-                slideIndex++;
-                if (slideIndex> slides.length) {slideIndex = 1}    
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace("active","");
-                }
-                slides[slideIndex-1].style.display = "block";  
-                dots[slideIndex-1].className += " active";
-                setTimeout(showSlides, 7800); // Change image every 2 seconds
-            }
-        </script>-->
-
-        <!-- for footer-->
-        
-        <div class="fixed" align="center">
-            <i class="fa fa-copyright" aria-hidden="true"></i>
-                : 2017 | Designed, Developed & Hosted by
-            <a href="http://exe.nith.ac.in">Team.exe</a>
-            <span id="icons">
-                <a href="https://www.facebook.com/teamexe/">
-                    <img id="fb" src="about/facebook.png" align="right" alt="facebook" onmouseover="bigImg(this)" onmouseout="normalImg(this)" title="Like us on facebook" style="width:2%;height:2%">
-                </a>
-
-                <a href="https://www.youtube.com/channel/UCTIpvLaM1G-uUsthgCDauKw">
-                    <img src="about/youtube.png" align="right" alt="you tube" title="Subscibe us on you tube" onmouseover="bigImg(this)" onmouseout="normalImg(this)" style="width:2%;height:2%">
-                </a>
-
-                <a href="https://www.instagram.com/teamexenith/">
-                    <img src="about/insta.png" align="right" alt="instagram" onmouseover="bigImg(this)" onmouseout="normalImg(this)" title="Follow us on Instagram" style="width:2%;height:2%">
-                </a>
-            </span>
-        </div>
         <script>
             function bigImg(x) {
                 x.style="width:2%;height:2%";
