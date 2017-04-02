@@ -7,12 +7,28 @@
     $email="";
     $message="";
   include_once 'includes/sql_config.php';
+    include_once 'secret.php';
   $db=mysqli_connect(HOST, USER, PASSWORD, DATABASE)
               or die('Error connecting to database');
     $email=mysqli_real_escape_string($db,$_POST["email"]);
     $email=test_input($email);
     $message=mysqli_real_escape_string($db,$_POST["confmsg"]);
     $message=test_input($message);
+    $captcha=$_POST["g-recaptcha-response"];
+    if(!$captcha){
+          echo '<h2>Please check the the captcha form.</h2>';
+          exit;
+        }
+    $ip=$_SERVER['REMOTE_ADDR'];
+    $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['g-recaptcha-response']);
+    $responseKeys=json_decode($verifyResponse,true);
+      if($responseKeys->success) {
+          echo '<h2>Thanks for posting confession.</h2>';
+          
+        } else {
+             echo '<h2>You are spammer ! Get out</h2>';
+            exit;
+        }
     function test_input($data) 
     {
         $data = trim($data);
@@ -22,7 +38,7 @@
         $data = preg_replace( "/rn/", " ", $data );
         return $data;
     }
-    if($message){
+    if($message ){
         $sql="INSERT INTO adminperm (email, message, permission) values ('$email',' $message',1)";
         if(mysqli_query($db,$sql))
         {

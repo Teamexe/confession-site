@@ -7,7 +7,7 @@
 #main{
     position:absolute;
     top:2%;
-    left:1%;
+    left:0%;
     right:1%;
     padding:15px 15px;
     background-color: rgba(88, 62, 126, 0.2);
@@ -23,8 +23,12 @@
     padding: 6px 12px;
 }
 #submission{
+    margin-top:20px;
     margin-left:12px;
 }
+.g-recaptcha{
+    transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;
+    }
 table.mceLayout, textarea.tinyMCE {
     width: 100%;
 }

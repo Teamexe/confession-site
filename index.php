@@ -18,7 +18,7 @@ $db=mysqli_connect(HOST, USER, PASSWORD, DATABASE)
 		</title>
 	<meta charset="utf-8"/>
 	</head>
-	<body style=" background-color:white">
+	<body style=" background-color:#f7b9cb">
         <!--script for facebook plugins-->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {

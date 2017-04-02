@@ -9,7 +9,7 @@ body{
 #info{
     padding:10px;
     margin-left:2%;
-    margin-right:3%;
+    margin-right:0%;
     margin-top:0%;
     background-color: #ff3333;
     border:1px solid grey;
@@ -23,7 +23,7 @@ body{
 #main{
     position:absolute;
     top:15%;
-    left:6%;
+    left:0%;
     padding:15px 15px;
     background-color: rgba(88, 62, 126, 0.2);
     border: 1px solid rgba(86, 61, 124, .2);
@@ -40,7 +40,11 @@ body{
 /*.extra{  
     margin-left:5px;
 }*/
+ .g-recaptcha{
+        transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;
+    }
 #submission{
+    margin-top:20px;
     margin-left:90px;
     background-color:#0033cc;
 }
@@ -52,6 +56,9 @@ body{
         top:18%;
         left:5%;
     }
+    .g-recaptcha{
+        transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;
+    }
 }
 @media only screen and (min-width:500px){
     *{
@@ -61,11 +68,17 @@ body{
         top:22%;
         left:10%;
     }
+    .g-recaptcha{
+        transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;
+    }
 }
 @media only screen and (min-width:600px){
     #main{
         top:26%;
         left:20%;
+    }
+    .g-recaptcha{
+        transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;
     }
 }
 @media only screen and (min-width:768px){
