@@ -47,7 +47,7 @@
                     <textarea class="inpf" name="confmsg" rows="10" cols="10">
                     </textarea>
                 </div>
-                <div class="g-recaptcha" data-sitekey="6LdRPBsUAAAAAGnkjtOlYEG6-EqbXMXivxRX7Olj"></div>
+                <div class="g-recaptcha" data-sitekey="6LfUPRsUAAAAAGgzv96APuiXYvUtxkHoUKs4pki7"></div>
                 <input type="submit" class="btn btn-info" id="submission" value="Submit" name="submit">
             </form>
         </div>

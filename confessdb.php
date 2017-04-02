@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validate confession</title>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+<body>
 <?php 
     
 
@@ -19,16 +26,33 @@
           echo '<h2>Please check the the captcha form.</h2>';
           exit;
         }
-    $ip=$_SERVER['REMOTE_ADDR'];
-    $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['g-recaptcha-response']);
+    //$ip=$_SERVER['REMOTE_ADDR'];
+    //myedits
+        echo $_SERVER['REMOTE_ADDR'];
+        $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
+        $obj = json_decode($response);
+        if($obj->success == true)
+            {
+                    echo "Captcha is working";
+            }
+        else
+            {
+                    echo "Captcha is not working";
+            }
+    //edits end
+
+    /*$verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['g-recaptcha-response']);
     $responseKeys=json_decode($verifyResponse,true);
-      if($responseKeys->success) {
-          echo '<h2>Thanks for posting confession.</h2>';
-          
-        } else {
-             echo '<h2>You are spammer ! Get out</h2>';
-            exit;
-        }
+      if($responseKeys->success) 
+        {
+          echo '<center><h2>Thanks for posting confession.</h2>';
+          echo '<a href="index.php">Check your confession here</a></center>';          
+        } 
+        else 
+        {
+             echo '<h2>You are a spamming</h2>';
+             exit;
+        }*/
     function test_input($data) 
     {
         $data = trim($data);
@@ -43,7 +67,7 @@
         if(mysqli_query($db,$sql))
         {
             echo "<center>Your confession has been posted</center>";
-            header( "refresh:1;url=index.php" );
+            header( "refresh:5;url=index.php" );
         }
         
         else
@@ -78,3 +102,5 @@
         }
     mysqli_close($db);
 ?> 
+</body>
+</html>
