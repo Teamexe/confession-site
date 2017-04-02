@@ -8,12 +8,14 @@
 
   if (!$resp->is_valid) 
   {
-    echo "captcha is working";
+    // What happens when the CAPTCHA was entered incorrectly
+    echo "Captcha is wrong";
     
     die ("The reCAPTCHA wasn't entered correctly. Go back and try it again."."(reCAPTCHA said: ".$resp->error .")");
   } 
   else 
   {
-    echo "captcha is not working";
+    // Your code here to handle a successful verification
+    echo "captcha is valid";
   }
   ?>
