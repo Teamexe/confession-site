@@ -34,7 +34,8 @@
                 height: "300",
                 plugin_preview_width: 250
             });
-    </script>
+        </script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
     <body>
         <div id="main"> 
@@ -46,8 +47,8 @@
                     <textarea class="inpf" name="confmsg" rows="10" cols="10">
                     </textarea>
                 </div>
+                <div class="g-recaptcha" data-sitekey="6LdRPBsUAAAAAGnkjtOlYEG6-EqbXMXivxRX7Olj"></div>
                 <input type="submit" class="btn btn-info" id="submission" value="Submit" name="submit">
-               
             </form>
         </div>
     </body>

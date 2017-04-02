@@ -1,8 +1,3 @@
-<?php
-    include_once 'includes/sql_config.php';
-  $db=mysqli_connect(HOST, USER, PASSWORD, DATABASE)
-              or die('Error connecting to database');
-?>
 
 <html>
     <head>
@@ -15,20 +10,12 @@
         <script src="jquery/jquery-3.2.0.min.js">
         </script>
         <meta charset="utf-8"/>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+        
     </head>
     <body style="background-color:lavender;">
-        <?php
-            $id="";
-            $name="";
-            $year="";
-            $branch="";
-            $email="";
-            $report="";
-            $id=$_POST['confessionid'];
-            $sql="update adminperm set report=report + 1 where id=$id and permission=1;";
-            mysqli_query($db, $sql);
-            header( "refresh:5;url=index.php" );
-            /*
+        
+            <?php/*
             $name=$_POST['name'];
             $year=$_POST['year'];
             $branch=$_POST['branch'];
@@ -38,7 +25,7 @@
             if($name=="" || $year=="" || $branch==""||$email=="")
             {
                 $message="Please enter all the required fields";
-                echo "<script> alert('$message');</script>"; 
+                echo 
             }
             else
             {
@@ -53,7 +40,7 @@
                 }
                 if(mail($email,$subject,$string,"")){
                     $message="Your report has been sent to the admin for a review process";
-                    echo "<script> alert('$message');</script>"; 
+                    echo 
                     $id="";
                     $name="";
                     $year="";
@@ -63,7 +50,7 @@
                 } 
                 else{
                     $message="your report can't be sent to the admin1";
-                    echo "<script> alert('$message');</script>"; 
+                    echo 
                 }
                 if(mail($email2,$subject,$string,"")){
                     $id="";
@@ -75,7 +62,7 @@
                 }
                 else{
                     $message="your report can't be sent to the admin2";
-                    echo "<script> alert('$message');</script>"; 
+                    echo 
                 }
             }*/
         ?>
@@ -97,30 +84,33 @@
             </div>
         </div>
         <div id="main">
-            <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+            <form role="form" method="post" action="reportdb.php">
                 <label for="confessionid">
                     Enter confession id without #
                 </label>
                 <div class="input">
                     <input class="inpf" name="confessionid" size="25" type="text" placeholder="" value="<?php echo $id?>">
                 </div>
-                <div class="input">
-                    <input type="text"  class="inpf" name="name" size="25"  placeholder="Enter name" value="<?php echo $name?>">
+                <!--<div class="input">
+                    <input type="text"  class="inpf" name="name" size="25"  placeholder="Enter name" value="<?php //echo $name?>">
                 </div>
                 <div class="input">
-                    <input type="text" name="year" class="inpf" size="25" placeholder="Enter Year" value="<?php echo $year?>"> 
+                    <input type="text" name="year" class="inpf" size="25" placeholder="Enter Year" value="<?php //echo $year?>"> 
                 </div>
                 <div class="input">
-                    <input type="text" name="branch" class="inpf" size="25" placeholder="Enter branch" value="<?php echo $branch?>">
+                    <input type="text" name="branch" class="inpf" size="25" placeholder="Enter branch" value="<?php //echo $branch?>">
                 </div>
                 <div class="input">
-                    <input type="text" name="email" class="inpf" size="25" placeholder="Enter email id " value="<?php echo $email?>"> 
-                </div>
+                    <input type="text" name="email" class="inpf" size="25" placeholder="Enter email id " value="<?//php echo $email?>"> 
+                </div>-->
                 <div class="input">
                     <label for="report">
                          What is the report?
                     </label><br>
                     <textarea class="inpf" name="report" rows="5" cols="25"><?php echo $report?></textarea>
+                </div>
+                <div class="input">
+                    <div class="g-recaptcha" data-sitekey="6LdRPBsUAAAAAGnkjtOlYEG6-EqbXMXivxRX7Olj"></div>
                 </div>
                 <input type="submit" class="btn btn-info" id="submission" value="Submit" name="submit"> 
             </form>
