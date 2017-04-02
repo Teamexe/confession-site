@@ -35,11 +35,10 @@
                 plugin_preview_width: 250
             });
         </script>
-        <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
     <body>
         <div id="main"> 
-            <form role="form" action="confessdb.php" method="post" >
+            <form role="form" action="verify.php" method="post" >
                 <div class="input">
                     <label for="message">
                         <strong>Confess here</strong>
@@ -47,7 +46,12 @@
                     <textarea class="inpf" name="confmsg" rows="10" cols="10">
                     </textarea>
                 </div>
-                <div class="g-recaptcha" data-sitekey="6LfUPRsUAAAAAGgzv96APuiXYvUtxkHoUKs4pki7"></div>
+                <?php
+                      require_once('recaptchalib.php');
+                      $publickey = "6LfUPRsUAAAAAGgzv96APuiXYvUtxkHoUKs4pki7"; // you got this from the signup page
+                      echo recaptcha_get_html($publickey);
+                ?>
+
                 <input type="submit" class="btn btn-info" id="submission" value="Submit" name="submit">
             </form>
         </div>
