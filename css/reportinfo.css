@@ -41,10 +41,9 @@ body{
     margin-left:5px;
 }*/
  .g-recaptcha{
-        transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;
+        transform:scale(0.80);-webkit-transform:scale(0.80);transform-origin:0 0;-webkit-transform-origin:0 0;
     }
 #submission{
-    margin-top:20px;
     margin-left:90px;
     background-color:#0033cc;
 }
@@ -57,7 +56,7 @@ body{
         left:5%;
     }
     .g-recaptcha{
-        transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;
+        transform:scale(0.80);-webkit-transform:scale(0.80);transform-origin:0 0;-webkit-transform-origin:0 0;
     }
 }
 @media only screen and (min-width:500px){
@@ -69,7 +68,7 @@ body{
         left:10%;
     }
     .g-recaptcha{
-        transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;
+        transform:scale(0.80);-webkit-transform:scale(0.80);transform-origin:0 0;-webkit-transform-origin:0 0;
     }
 }
 @media only screen and (min-width:600px){
@@ -78,13 +77,16 @@ body{
         left:20%;
     }
     .g-recaptcha{
-        transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;
+        transform:scale(0.95);-webkit-transform:scale(0.95);transform-origin:0 0;-webkit-transform-origin:0 0;
     }
 }
 @media only screen and (min-width:768px){
     #main{
         left:35%;
         top:12%;
+    }
+     .g-recaptcha{
+        transform:scale(0.97);-webkit-transform:scale(0.97);transform-origin:0 0;-webkit-transform-origin:0 0;
     }
 }
 @media only screen and (orientation:landscape and max-height:600px){
