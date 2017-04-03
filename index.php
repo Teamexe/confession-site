@@ -11,7 +11,11 @@ $db=mysqli_connect(HOST, USER, PASSWORD, DATABASE)
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Confession site by - Team .EXE">
     <meta name="author" content="Team .EXE">
-    <link rel="icon" href="exe.nith.ac.in/images/confess.png">
+    <link rel="icon" href="images/title.png">
+    <meta property="og:image" content="images/confess.png"/>
+    <meta property="og:title" content="NITH Confession - Team .EXE"/>
+    <meta property="og:url" content="http://exe.nith.ac.in/confess"/>
+    <meta property="og:site_name" content="NITH Confession site by - Team .EXE"/>
 
     <title>Confession - Team .EXE</title>
     <style type="text/css">
