@@ -105,7 +105,7 @@ Confession Verification page
     die ("The reCAPTCHA wasn't entered correctly. Go back and try it again."."(reCAPTCHA said: ".$resp->error .")");
   } 
   else 
-  {*/
+  {
     // Your code here to handle a successful verification
     $message=mysqli_real_escape_string($db,$_POST["confmsg"]);
     $message=test_input($message);
