@@ -20,14 +20,14 @@ $db=mysqli_connect(HOST, USER, PASSWORD, DATABASE)
 	</head>
 	<body style=" background-color:#f7b9cb">
         <!--script for facebook plugins-->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
 
 
 
@@ -53,7 +53,7 @@ $db=mysqli_connect(HOST, USER, PASSWORD, DATABASE)
                 function closeNav() {
                     document.getElementById("mySidenav").style.width = "0";
                     document.getElementById("main").style.marginLeft= "0";
-                    document.body.style.backgroundColor = "white";
+                    document.body.style.backgroundColor = "#f7b9cb";
                 }
             </script>
 
