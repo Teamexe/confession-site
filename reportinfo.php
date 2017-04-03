@@ -113,5 +113,8 @@
             </form>
         </div>
         </center>
+        <?php
+    include_once('footer.php');
+?>
     </body>
 </html>

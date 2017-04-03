@@ -110,5 +110,8 @@ $('#return-to-top').click(function() {      // When arrow is clicked
    <!-- Return to Top -->
     <a href="#topp" id="return-to-top"><i class="icon-chevron-up"></i></a>
 
+<?php
+    include_once('footer.php');
+?>
 </body>
 </html>

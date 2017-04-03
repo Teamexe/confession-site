@@ -63,5 +63,8 @@
                 <input type="submit" class="btn btn-info" id="submission" value="Submit" name="submit">
             </form>
         </div>
+        <?php
+    include_once('footer.php');
+?>
     </body>
 </html>
