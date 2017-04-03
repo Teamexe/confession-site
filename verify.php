@@ -79,8 +79,7 @@ Confession Verification page
   $db=mysqli_connect(HOST, USER, PASSWORD, DATABASE)  or die('Error connecting to database');
 
   //get the time of the confessions
-  $dt=date("h:i:sa")." - ".date("d/m/Y");
-  $ab="$dt";
+  $da=date("d/m/Y");
 
   function test_input($data) 
     {
@@ -112,7 +111,7 @@ Confession Verification page
 
     if($message)
     {
-        $sql="INSERT INTO adminperm (message, dat, permission) values ('$message','$ab',1)";
+        $sql="INSERT INTO adminperm (message, dat, permission) values ('$message','$da',1)";
         if(mysqli_query($db,$sql))
         {
             echo '<center><h2>Thanks for posting confession.</h2>';
