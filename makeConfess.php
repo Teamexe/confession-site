@@ -44,14 +44,13 @@
       include_once('header.php');
 ?>
     <body>
+    <div class="page-header">
+  <h1>Confess here <small> - Team .EXE</small></h1>
+  NOTE - Please be sensible towards feelings of others and don't post abusive things.  Posting such things can result in increased security for the website and monitoring of confessors IP.
+</div>
         <div id="main1"> 
             <form role="form" action="verify.php" method="post" >
                 <div class="input">
-                    <label for="message">
-                        <strong><h1>Confess here</h1></strong> 
-                    </label><br>
-                    NOTE - Please be sensible towards feelings of others and don't post abusive things.  Posting such things can result in increased security for the website and monitoring of confessors IP.
-                    <br>
                     <textarea class="inpf" name="confmsg" rows="10" cols="10">
                     </textarea>
                 </div>

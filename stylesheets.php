@@ -16,3 +16,5 @@
     <script src="../website/js/owl.carousel.min.js"></script>
     <script src="../website/js/bootstrap.min.js"></script>
     <script src="../website/js/main.js"></script>   
+    <!-- ICON NEEDS FONT AWESOME FOR CHEVRON UP ICON -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">

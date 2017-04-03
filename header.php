@@ -26,9 +26,9 @@
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
                     <div class="main-menu">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="../website/index.php" class="tooltip-show" data-toggle="tooltip" title="Team .EXE">Team .exe website</a></li>
-                            <li><a href="makeConfess.php" class="tooltip-show" data-toggle="tooltip" title="About - Team .EXE">Confess</a></li>
-                            <li><a href="reportinfo.php" class="tooltip-show" data-toggle="tooltip" title="Contact - Team .EXE">Report confession</a></li>
+                            <li><a href="../website/index.php" class="tooltip-show" data-toggle="tooltip" title="Team .EXE - website">Team .exe website</a></li>
+                            <li><a href="makeConfess.php" class="tooltip-show" data-toggle="tooltip" title="Confess here">Confess</a></li>
+                            <li><a href="reportinfo.php" class="tooltip-show" data-toggle="tooltip" title="Report confession/suggestion">Report confession</a></li>
                         </ul>
                   </div>
                 </nav>
