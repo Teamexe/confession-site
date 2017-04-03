@@ -19,7 +19,7 @@
     <body>
     <center>
         
-            <?php/*
+            <!-- <?php/*
             $name=$_POST['name'];
             $year=$_POST['year'];
             $branch=$_POST['branch'];
@@ -69,7 +69,7 @@
                     echo 
                 }
             }*/
-        ?>
+        ?> -->
         <br>
         <div id="info">
             <div id="mainContent">
@@ -102,7 +102,7 @@
                     <label for="report">
                          Your Report
                     </label><br>
-                    <textarea class="inpf" name="report" rows="10" cols="37"><?php echo $report?></textarea>
+                    <textarea class="inpf" name="report" rows="10" cols="37"></textarea>
                 </div>
                 <?php
                       require_once('recaptchalib.php');

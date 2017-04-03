@@ -12,7 +12,7 @@
                         $counter=$row['id']
                     ?>
                     <div class="demo-card">
-                        <div class="panel panel-danger">
+                        <div class="panel panel-info">
                             <div class="panel-heading">
                                     <h3 class="panel-title">Confession #<?php echo $row['id'];?></h3>
                             </div>
