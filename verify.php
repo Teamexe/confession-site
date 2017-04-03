@@ -132,8 +132,5 @@ Confession Verification page
       mysqli_close($db);
   ?>
   </center>
-  <?php
-    include_once('footer.php');
-?>
 </body>
 </html>

@@ -111,3 +111,5 @@ die ("<center>The reCAPTCHA wasn't entered correctly. Go back and try it again."
   }
   ?>
 </center>
+</body>
+</html>
