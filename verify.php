@@ -80,6 +80,7 @@ Confession Verification page
 
   //get the time of the confessions
   $da=date("d/m/Y");
+  $cmt="Admin comment coming soon.";
 
   function test_input($data) 
     {
@@ -111,7 +112,7 @@ Confession Verification page
 
     if($message)
     {
-        $sql="INSERT INTO adminperm (message, dat, permission) values ('$message','$da',1)";
+        $sql="INSERT INTO adminperm (message, cmnt, dat, permission) values ('$message','$cmt','$da',1)";
         if(mysqli_query($db,$sql))
         {
             echo '<center><h2>Thanks for posting confession.</h2>';
