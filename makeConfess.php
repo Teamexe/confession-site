@@ -1,13 +1,14 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <link rel="stylesheet" href="css/makeConfess.css">
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-        <script type="text/javascript" src="tinymce/tinymce.min.js"></script>
-         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <title> Confession Page</title>
-        <script>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Confession site by - Team .EXE">
+    <meta name="author" content="Team .EXE">
+    <link rel="icon" href="exe.nith.ac.in/images/confess.png">
+    <link rel="stylesheet" href="css/makeconfess.css">
+    <script type="text/javascript" src="tinymce/tinymce.min.js"></script>
+    <script>
              tinymce.init({
             selector: "textarea",   
              plugins: [
@@ -35,14 +36,22 @@
                 plugin_preview_width: 250
             });
         </script>
-    </head>
+    <title>Confess here - Team .EXE</title>
+
+<?php 
+      include_once('stylesheets.php');
+      echo "</head><body>";
+      include_once('header.php');
+?>
     <body>
-        <div id="main"> 
+        <div id="main1"> 
             <form role="form" action="verify.php" method="post" >
                 <div class="input">
                     <label for="message">
-                        <strong>Confess here</strong>
+                        <strong><h1>Confess here</h1></strong> 
                     </label><br>
+                    NOTE - Please be sensible towards feelings of others and don't post abusive things.  Posting such things can result in increased security for the website and monitoring of confessors IP.
+                    <br>
                     <textarea class="inpf" name="confmsg" rows="10" cols="10">
                     </textarea>
                 </div>

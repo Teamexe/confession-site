@@ -1,19 +1,23 @@
-
-<html>
-    <head>
-        <title> reporting page</title>
-        <link rel="stylesheet" href="css/reportinfo.css">
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="font-awesome/css/font-awesome-animation.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="jquery/jquery-3.2.0.min.js">
-        </script>
-        <meta charset="utf-8"/>
-        <script src='https://www.google.com/recaptcha/api.js'></script>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Confession site by - Team .EXE">
+    <meta name="author" content="Team .EXE">
+    <link rel="icon" href="exe.nith.ac.in/images/confess.png">
+    <link rel="stylesheet" href="css/makeconfess.css">
+    <script type="text/javascript" src="tinymce/tinymce.min.js"></script>
         
-    </head>
-    <body style="background-color:lavender;">
+    <title>Report confession - Team .EXE</title>
+
+<?php 
+      include_once('stylesheets.php');
+      echo "</head><body>";
+      include_once('header.php');
+?>
+    <body>
+    <center>
         
             <?php/*
             $name=$_POST['name'];
@@ -66,6 +70,7 @@
                 }
             }*/
         ?>
+        <br>
         <div id="info">
             <div id="mainContent">
                 <i class="fa fa-exclamation-triangle faa-flash animated" aria-hidden="true"></i>
@@ -83,37 +88,30 @@
                 </span>
             </div>
         </div>
+        <br><br>
         <div id="main">
             <form role="form" method="post" action="reportdb.php">
                 <label for="confessionid">
                     Enter confession id without #
                 </label>
                 <div class="input">
-                    <input class="inpf" name="confessionid" size="25" type="text" placeholder="" value="<?php echo $id?>">
+                    <input class="inpf" name="confessionid" size="34" type="text" placeholder="" value="<?php echo $id?>">
                 </div>
-                <!--<div class="input">
-                    <input type="text"  class="inpf" name="name" size="25"  placeholder="Enter name" value="<?php //echo $name?>">
-                </div>
-                <div class="input">
-                    <input type="text" name="year" class="inpf" size="25" placeholder="Enter Year" value="<?php //echo $year?>"> 
-                </div>
-                <div class="input">
-                    <input type="text" name="branch" class="inpf" size="25" placeholder="Enter branch" value="<?php //echo $branch?>">
-                </div>
-                <div class="input">
-                    <input type="text" name="email" class="inpf" size="25" placeholder="Enter email id " value="<?//php echo $email?>"> 
-                </div>-->
+                <br>
                 <div class="input">
                     <label for="report">
-                         What is the report?
+                         Your Report
                     </label><br>
-                    <textarea class="inpf" name="report" rows="5" cols="25"><?php echo $report?></textarea>
+                    <textarea class="inpf" name="report" rows="10" cols="37"><?php echo $report?></textarea>
                 </div>
-                <div class="input">
-                    <div class="g-recaptcha" data-sitekey="6LdRPBsUAAAAAGnkjtOlYEG6-EqbXMXivxRX7Olj"></div>
-                </div>
+                <?php
+                      require_once('recaptchalib.php');
+                      $publickey = "6LfUPRsUAAAAAGgzv96APuiXYvUtxkHoUKs4pki7"; // you got this from the signup page
+                      echo recaptcha_get_html($publickey);
+                ?>
                 <input type="submit" class="btn btn-info" id="submission" value="Submit" name="submit"> 
             </form>
         </div>
+        </center>
     </body>
 </html>

@@ -1,14 +1,7 @@
-*{
-	box-sizing:border-box;
-    margin:0px;
-	padding:0px;
-    font-size:12px;
-}
-#main{
+#main1{
     position:absolute;
     top:2%;
-    left:0%;
-    right:1%;
+    width: 90%;
     padding:15px 15px;
     background-color: rgba(88, 62, 126, 0.2);
     border: 1px solid rgba(86, 61, 124, .2);
