@@ -97,7 +97,7 @@ die ("<center>The reCAPTCHA wasn't entered correctly. Go back and try it again."
             $report=$_POST['report'];
             $id=$_POST['confessionid'];
             
-            $sql="update adminperm set report=report + 1 where id=$id and permission=1;";
+            $sql="update adminperm set report=1 where id=$id and permission=1;";
             $sql="update adminperm set permission=0 where id=$id;";
             mysqli_query($db, $sql);
 
