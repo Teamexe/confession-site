@@ -44,6 +44,7 @@ $db=mysqli_connect(HOST, USER, PASSWORD, DATABASE)
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    z-index: 2147483;
 }
 #return-to-top i {
     color: #fff;
@@ -57,13 +58,16 @@ $db=mysqli_connect(HOST, USER, PASSWORD, DATABASE)
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    z-index: 2147483;
 }
 #return-to-top:hover {
     background: rgba(0, 0, 0, 0.9);
+    z-index: 2147483;
 }
 #return-to-top:hover i {
     color: #fff;
     top: 5px;
+    z-index: 2147483;
 }
     </style>
     
