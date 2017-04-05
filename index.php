@@ -12,6 +12,8 @@ $db=mysqli_connect(HOST, USER, PASSWORD, DATABASE)
     <meta name="description" content="Confession site by - Team .EXE">
     <meta name="author" content="Team .EXE">
     <link rel="icon" href="images/title.png">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome-animation.css">
     <meta property="og:image" content="images/confess.png"/>
     <meta property="og:title" content="NITH Confession - Team .EXE"/>
     <meta property="og:url" content="http://exe.nith.ac.in/confess"/>
@@ -69,6 +71,20 @@ $db=mysqli_connect(HOST, USER, PASSWORD, DATABASE)
     top: 5px;
     z-index: 2147483;
 }
+        #direction{
+            margin-bottom:3%;   
+        }
+        .dir{
+            padding:1%;
+            background-color: #d6e9c6;
+            border-radius:
+        }
+        #prev{
+            margin-left:5%;
+        }
+        #next{
+            margin-left:78%;
+        }
     </style>
     
 
