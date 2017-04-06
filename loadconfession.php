@@ -1,6 +1,26 @@
 <?php 
-                $query="select * from adminperm
-                        where permission=1 order by id desc";
+    $limit=20;
+    $sql=mysqli_query($db,"select max(id) as id from adminperm");
+    while($row=mysqli_fetch_assoc($sql)){
+        $maxid=$row['id'];
+    }
+    $pages=ceil($maxid/$limit);
+    $page = min($pages, filter_input(INPUT_GET, 'page', FILTER_VALIDATE_INT, array(
+        'options' => array(
+            'default'   => 1,
+            'min_range' => 1,
+        ),
+    )));
+    $start=$maxid-(($page-1)*20);
+    if($start<20)
+        $end=1;
+    else{
+        $end=$start-19;
+    }
+    for($i=$start;$i>=$end;$i--)
+    {
+        $query="select * from adminperm
+                        where permission=1 && id=$i order by id desc";
                 $result=mysqli_query($db, $query);
                 $counter=-1;
                 if(!$result)die ("Database access failed:". mysql_error());
@@ -31,7 +51,22 @@
                         </div>
                     </div>                 
                 <?php }
-                    mysqli_close($db);
+    }
+                $prevlink = ($page > 1) ? ' <a href="?page=' . ($page - 1) . '" title="Previous page">Prev</a>' : ' <span class="disabled">Prev</span>';
+                $nextlink = ($page < $pages) ? '<a href="?page=' . ($page + 1) . '" title="Next page">Next</a>' : '<span class="disabled">Next</span>';
+                ?>
+                <div id="direction">
+                    <span class="dir" id="prev">
+                        <i class="fa fa-angle-double-left faa-passing-reverse animated" style="font-size:24px"></i>
+                        <?php echo $prevlink; ?>
+                    </span>
+                    <span class="dir" id="next">
+                        <?php echo $nextlink; ?>
+                        <i class="fa fa-angle-double-right faa-passing animated" style="font-size:24px"></i>
+                    </span>
+                </div>
+                <?php
+                mysqli_close($db);
                 ?>
 
 
