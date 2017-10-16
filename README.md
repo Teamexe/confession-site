@@ -13,9 +13,7 @@ HTML, CSS, PHP, JS, SQL
 1. Fork and clone the repository
 2. Change the localhost username, password, database name in almost all .php files according to your database.
 3. Run using: 
-```
-php -S localhost:8080
-```
+```php -S localhost:8080```
 4. View the website on your web browser at ```localhost:8080/```
 
 
@@ -23,18 +21,12 @@ php -S localhost:8080
 
 1. Follow the steps above to install the application.
 2. Check out a new git branch:
-```
-git checkout -b my_changes 
-```
-3. Commit changes with a description of what you did: ```
-git add -A
-```
-```
-git commit -m "[description]"
-```
+```git checkout -b my_changes ```
+3. Commit changes with a description of what you did: 
+```git add -A```
+```git commit -m "[description]"```
 4. Push to your remote branch: 
-```git push
-```
+```git push```
 5. Generate a pull request.
 
 ## License
