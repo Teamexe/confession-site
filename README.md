@@ -9,16 +9,13 @@ Students can feel comfortable revealing their thoughts due to the complete anony
 HTML, CSS, PHP, JS, SQL
 
 ## Install
-
 1. Fork and clone the repository
 2. Change the localhost username, password, database name in almost all .php files according to your database.
 3. Run using: 
 ```php -S localhost:8080```
 4. View the website on your web browser at ```localhost:8080/```
 
-
 ## Contribute
-
 1. Follow the steps above to install the application.
 2. Check out a new git branch:
 ```git checkout -b my_changes ```
@@ -30,5 +27,4 @@ HTML, CSS, PHP, JS, SQL
 5. Generate a pull request.
 
 ## License
-© Rishabh04-02
-
+[Apache 2.0](https://github.com/Teamexe/confession-site/blob/master/LICENSE)
