@@ -19,7 +19,7 @@ php -S localhost:8080
 4. View the website on your web browser at ```localhost:8080/```
 
 
-##Contribute
+## Contribute
 
 1. Follow the steps above to install the application.
 2. Check out a new git branch:
